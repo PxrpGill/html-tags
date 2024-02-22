@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="file" id="file-input"> 
+        <input type="submit">
+    </form>
+    <div id="progress-bar-container"></div>
+    <template id="progress-template">
+        <progress max="100" value="0" id="file-progress"></progress>
+    </template>
+
+    <script>
+        const input = document.getElementById('file-input');
+        const templateNode = document.getElementById('progress-template');
+        const fileProgressTemplate = templateNode.content.cloneNode(true);
+        const fileProgress = fileProgressTemplate.getElementById('file-progress');        
+        const progressBarContainer = document.getElementById('progress-bar-container');
+
+        input.addEventListener('change', function() {
+            if (this.files.length > 0) {
+                fileProgress.max = 100;
+                fileProgress.value = 100;
+
+                progressBarContainer.appendChild(fileProgressTemplate);
+            }
+        })
+    </script>
+</body>
+</html>
