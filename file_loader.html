@@ -7,7 +7,7 @@
 </head>
 <body>
     <form>
-        <input type="file" id="file-input"> 
+        <input type="file" id="file-input" multiple><label id="file-size-output" for="file-input"></label>
         <input type="submit">
     </form>
     <div id="progress-bar-container"></div>
@@ -21,9 +21,16 @@
         const fileProgressTemplate = templateNode.content.cloneNode(true);
         const fileProgress = fileProgressTemplate.getElementById('file-progress');        
         const progressBarContainer = document.getElementById('progress-bar-container');
+        const fileSizeOutput = document.getElementById('file-size-output');
 
         input.addEventListener('change', function() {
             if (this.files.length > 0) {
+                let fileSize = 0;
+                for (let i = 0; i < this.files.length; i++) {
+                    const currentFile = this.files[i];
+                    fileSize += currentFile.size / 1024;
+                    fileSizeOutput.innerHTML = fileSize.toFixed(2) + "KB";
+                }
                 fileProgress.max = 100;
                 fileProgress.value = 100;
 
