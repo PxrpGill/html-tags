@@ -13,14 +13,68 @@
         адрес и эти документы могут переноситься в другую папку или даже на 
         другой компьютер без потери связи
     -->
-    <base target="_blank">
     <title>title - определяет заголовок документа</title>
     <!--link - Устанавливает связь с внешним документом вроде файла со стилями или со шрифтами-->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a href="file_loader.html">Посмотреть файловый загрузчик</a>
-    <hr>
+    <header id="main-header">
+        <div class="container">
+        <h1 class="block">HTML теги</h1>
+        <nav class="block">
+            <ul id="header-menu">
+                <li><a href="file_loader.html">Посмотреть файловый загрузчик</a></li>
+                <li><a href="#">Здесь шо то еще</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+        <h2>Разделы</h2>
+        <div class="wrapper" id="sections">
+            <div>&lt;article&gt;</div>
+            <div>&lt;section&gt;</div>
+            <div>&lt;nav&gt;</div>
+            <div>&lt;aside&gt;</div>
+            <div>Теги заголовков &lt;h&gt;</div>
+            <div>&lt;hgroup&gt;</div>
+            <div>&lt;header&gt;</div>
+            <div>&lt;footer&gt;</div>
+            <div>&lt;address&gt;</div>
+        </div>
+        <hr>
+        <h2>Группировка контента</h2>
+        <div class="wrapper" id="grouping-content">
+            <div>&lt;p&gt;</div>
+            <div>&lt;hr&gt;</div>
+            <div>&lt;pre&gt;</div>
+            <div>&lt;blockquote&gt;</div>
+            <div>&lt;ol&gt;</div>
+            <div>&lt;ul&gt;</div>
+            <div>&lt;menu&gt;</div>
+            <div>&lt;li&gt;</div>
+            <div>&lt;dl&gt;</div>
+            <div>&lt;dt&gt;</div>
+            <div>&lt;dd&gt;</div>
+            <div>&lt;figure&gt;</div>
+            <div>&lt;figcaption&gt;</div>
+            <div>&lt;main&gt;</div>
+            <div>&lt;search&gt;</div>
+            <div>&lt;div&gt;</div>
+        </div>
+        <hr>
+        <h2>Семантика уровня текста</h2>
+        <div class="wrapper" id="text-level-semantics">
+
+        </div>
+        </div>
+    </main>
+
+
+
+
+
     <h2>Тег article</h2>
     <article>
         article - Независимый блок контента, например,
@@ -210,7 +264,7 @@
             </td>
         </tr>
     </table>
-    <img src="datajpg.jpg">
+    <img src="img/datajpg.jpg">
     <hr>
     <h2>Тег time</h2>
     <p>time - помечает текст внутри тега как дата, время или оба значения</p>
@@ -318,7 +372,7 @@
     <h2>Тег source</h2>
     <p>source - вставляет звуковой или видеофайл для тегов audio и video. Обобщенно такие файлы называются медийными</p>
     <audio controls>
-        <source src="audio.mp3" type="audio/mpeg">
+        <source src="src/audio.mp3" type="audio/mpeg">
         Ваш браузер не поддерживает этот элемент
     </audio>
     <video controls>
@@ -662,7 +716,7 @@
     <hr>
     <h2>Тег template</h2>
     <p>template - предназначен для хранения «образца» разметки, невидимого и предназначенного для вставки куда-либо.</p>
-    <image src="код.jpg"></image>
+    <image src="img/код.jpg"></image>
     <template id="tmpl">
         <form>
             <input type="file">
