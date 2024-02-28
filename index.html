@@ -33,9 +33,42 @@
         <div class="container">
         <h2>Разделы</h2>
         <div class="wrapper" id="sections">
-            <div>&lt;article&gt;</div>
-            <div>&lt;section&gt;</div>
-            <div>&lt;nav&gt;</div>
+            <div>
+                <button type="button" onclick="window.articleDialog.show()">
+                    &lt;article&gt;
+                </button>
+                <dialog id="articleDialog">
+                    <p>
+                        article - Независимый блок контента, например,
+                        статья или пост в блоге
+                    </p>
+                    <button class="close-button" type="button" onclick="window.articleDialog.close()">
+                        Закрыть
+                    </button>
+                </dialog>
+            </div>
+            <div>
+                <button type="button" onclick="window.sectionDialog.show()">
+                    &lt;section&gt;
+                </button>
+                <dialog id="sectionDialog">
+                    <p>Section - определяет раздел в документе</p>
+                    <button class="close-button" type="button" onclick="window.sectionDialog.close()">
+                        Закрыть
+                    </button>
+                </dialog>
+            </div>
+            <div>
+                <button type="button" onclick="window.navDialog.show()">
+                    &lt;nav&gt;
+                </button>
+                <dialog id="navDialog">
+                    <p>nav - навигационная панель сайта, на которой находятся ссылки</p>
+                    <button class="close-button" type="button" onclick="window.navDialog.close()">
+                        Закрыть
+                    </button>
+                </dialog>
+            </div>
             <div>&lt;aside&gt;</div>
             <div>Теги заголовков &lt;h&gt;</div>
             <div>&lt;hgroup&gt;</div>

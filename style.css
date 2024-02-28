@@ -3,7 +3,8 @@ body {
 }
 
 #main-header {
-    background: gray;
+    background: rgb(133, 164, 225);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
 }
 
 #header-menu li {
@@ -11,8 +12,8 @@ body {
     padding: 30px;
 }
 
-#header-menu li a {
-    color: yellow;
+#header-menu li a { 
+    color: black;
     text-decoration: none;
 }
 
@@ -23,11 +24,13 @@ body {
 }
 
 .wrapper div {
-    background: yellow;
+    background: rgb(229, 163, 167);
     margin: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px black solid;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .block {
@@ -37,4 +40,19 @@ body {
 .container {
     width: 80%;
     margin: 0 auto;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+dialog {
+    border-radius: 45px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    background: rgb(255, 255, 255);
+}
+
+.close-button {
+    color: red;
 }
