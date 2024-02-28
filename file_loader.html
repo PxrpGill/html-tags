@@ -18,40 +18,6 @@
     <template id="progress-template">
         <progress max="100" value="0" id="file-progress"></progress>
     </template>
-
-    <script>
-        const input = document.getElementById('file-input');
-        const templateNode = document.getElementById('progress-template');
-        const fileProgressTemplate = templateNode.content.cloneNode(true);
-        const fileProgress = fileProgressTemplate.getElementById('file-progress');        
-        const progressBarContainer = document.getElementById('progress-bar-container');
-        const fileList = document.getElementById('file-list');
-
-        input.addEventListener('change', function() {
-            if (this.files.length > 0) {
-                let fileSize = 0;
-                for (let i = 0; i < this.files.length; i++) {
-                    const currentFile = this.files[i];
-                    fileSize = currentFile.size / 1024;
-
-                    const li = document.createElement('li');
-                    li.textContent = currentFile.name + ' ' + fileSize.toFixed(2) + ' KB';
-
-                    const deleteButton = document.createElement('button');
-                    deleteButton.textContent = 'Удалить';
-                    deleteButton.addEventListener('click', function() {
-                        fileList.removeChild(li);
-                    });
-        
-                    li.appendChild(deleteButton);
-                    fileList.appendChild(li);
-
-                    fileProgress.value += 100 / this.files.length;
-                    console.log(fileProgress.value);
-                }
-                progressBarContainer.appendChild(fileProgressTemplate);
-            }
-        })
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>
