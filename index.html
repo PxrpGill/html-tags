@@ -1,20 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!--Metadata-->
-    <!--
-        meta - определяет метатеги, которые используются для хранения
-        информации предназначенной для браузеров и поисковых систем
-    -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--
-        base - предназначен для документов, в которых используется относительный
-        адрес и эти документы могут переноситься в другую папку или даже на 
-        другой компьютер без потери связи
-    -->
     <title>title - определяет заголовок документа</title>
-    <!--link - Устанавливает связь с внешним документом вроде файла со стилями или со шрифтами-->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -33,68 +22,47 @@
         <div class="container">
         <h2>Разделы</h2>
         <div class="wrapper" id="sections">
-            <div>
-                <button type="button" onclick="window.articleDialog.show()">
-                    &lt;article&gt;
+            <div id="articleBlock">
+                <button type="button" onclick="open_dialog('article', 'articleBlock')">
+                    &lt;article&gt;&lt;/article&gt;
                 </button>
-                <dialog id="articleDialog">
-                    <p>
-                        article - Независимый блок контента, например,
-                        статья или пост в блоге
-                    </p>
-                    <button class="close-button" type="button" onclick="window.articleDialog.close()">
-                        Закрыть
-                    </button>
-                </dialog>
             </div>
             <div>
-                <button type="button" onclick="window.sectionDialog.show()">
-                    &lt;section&gt;
+                <button type="button" onclick="open_dialog('section')">
+                    &lt;section&gt;&lt;/section&gt;
                 </button>
-                <dialog id="sectionDialog">
-                    <p>Section - определяет раздел в документе</p>
-                    <button class="close-button" type="button" onclick="window.sectionDialog.close()">
-                        Закрыть
-                    </button>
-                </dialog>
             </div>
             <div>
-                <button type="button" onclick="window.navDialog.show()">
-                    &lt;nav&gt;
+                <button type="button" onclick="open_dialog('nav')">
+                    &lt;nav&gt;&lt;/nav&gt;
                 </button>
-                <dialog id="navDialog">
-                    <p>nav - навигационная панель сайта, на которой находятся ссылки</p>
-                    <button class="close-button" type="button" onclick="window.navDialog.close()">
-                        Закрыть
-                    </button>
-                </dialog>
             </div>
-            <div>&lt;aside&gt;</div>
-            <div>Теги заголовков &lt;h&gt;</div>
-            <div>&lt;hgroup&gt;</div>
-            <div>&lt;header&gt;</div>
-            <div>&lt;footer&gt;</div>
-            <div>&lt;address&gt;</div>
+            <div>&lt;aside&gt;&lt;/aside&gt;</div>
+            <div>Заголовки &lt;h&gt;&lt;/h&gt;</div>
+            <div>&lt;hgroup&gt;&lt;/hgroup&gt;</div>
+            <div>&lt;header&gt;&lt;/header&gt;</div>
+            <div>&lt;footer&gt;&lt;/footer&gt;</div>
+            <div>&lt;address&gt;&lt;/address&gt;</div>
         </div>
         <hr>
         <h2>Группировка контента</h2>
         <div class="wrapper" id="grouping-content">
-            <div>&lt;p&gt;</div>
+            <div>&lt;p&gt;&lt;/p&gt;</div>
             <div>&lt;hr&gt;</div>
-            <div>&lt;pre&gt;</div>
-            <div>&lt;blockquote&gt;</div>
-            <div>&lt;ol&gt;</div>
-            <div>&lt;ul&gt;</div>
-            <div>&lt;menu&gt;</div>
-            <div>&lt;li&gt;</div>
-            <div>&lt;dl&gt;</div>
-            <div>&lt;dt&gt;</div>
-            <div>&lt;dd&gt;</div>
-            <div>&lt;figure&gt;</div>
-            <div>&lt;figcaption&gt;</div>
-            <div>&lt;main&gt;</div>
-            <div>&lt;search&gt;</div>
-            <div>&lt;div&gt;</div>
+            <div>&lt;pre&gt;&lt;/pre&gt;</div>
+            <div>&lt;blockquote&gt;&lt;/blockquote&gt;</div>
+            <div>&lt;ol&gt;&lt;/ol&gt;</div>
+            <div>&lt;ul&gt;&lt;/ul&gt;</div>
+            <div>&lt;menu&gt;&lt;/menu&gt;</div>
+            <div>&lt;li&gt;&lt;/li&gt;</div>
+            <div>&lt;dl&gt;&lt;/dl&gt;</div>
+            <div>&lt;dt&gt;&lt;/dt&gt;</div>
+            <div>&lt;dd&gt;&lt;/dd&gt;</div>
+            <div>&lt;figure&gt;&lt;/figure&gt;</div>
+            <div>&lt;figcaption&gt;&lt;/figcaption&gt;</div>
+            <div>&lt;main&gt;&lt;/main&gt;</div>
+            <div>&lt;search&gt;&lt;/search&gt;</div>
+            <div>&lt;div&gt;&lt;/div&gt;</div>
         </div>
         <hr>
         <h2>Семантика уровня текста</h2>
@@ -103,6 +71,15 @@
         </div>
         </div>
     </main>
+    <template id="message-template">
+        <dialog id="dialogWindow">
+            <p></p>
+            <button class="close-button" type="button" onclick="window.dialogWindow.close()">
+                Закрыть
+            </button>
+        </dialog>
+    </template>
+    <script src="dialog.js"></script>
 
 
 
