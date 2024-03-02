@@ -20,61 +20,84 @@
     </header>
     <main>
         <div class="container">
-        <h2>Разделы</h2>
-        <div class="wrapper" id="sections">
-            <div id="articleBlock">
-                <button type="button" onclick="open_dialog('article', 'articleBlock')">
-                    &lt;article&gt;&lt;/article&gt;
-                </button>
+            <h2>Разделы</h2>
+            <div class="wrapper" id="sections">
+                <div id="articleBlock">
+                    <button type="button" onclick="open_dialog('article', '#articleBlock')">
+                        &lt;article&gt;&lt;/article&gt;
+                    </button>
+                </div>
+                <div id="sectionBlock">
+                    <button type="button" onclick="open_dialog('section', '#sectionBlock')">
+                        &lt;section&gt;&lt;/section&gt;
+                    </button>
+                </div>
+                <div id="navBlock">
+                    <button type="button" onclick="open_dialog('nav', '#navBlock')">
+                        &lt;nav&gt;&lt;/nav&gt;
+                    </button>
+                </div>
+                <div id="asideBlock">
+                    <button type="button" onclick="open_dialog('aside', '#asideBlock')">
+                        &lt;aside&gt;&lt;/aside&gt;
+                    </button>
+                </div>
+                <div id="hBlock">
+                    <button type="button" onclick="open_dialog('h', '#hBlock')">
+                        Заголовки &lt;h&gt;&lt;/h&gt;
+                    </button>
+                </div>
+                <div id="hgroupBlock">
+                    <button type="button" onclick="open_dialog('hgroup', '#hgroupBlock')">
+                        &lt;hgroup&gt;&lt;/hgroup&gt;
+                    </button>
+                </div>
+                <div id="headerBlock">
+                    <button type="button" onclick="open_dialog('header', '#headerBlock')">
+                        &lt;header&gt;&lt;/header&gt;
+                    </button>
+                </div>
+                <div id="footerBlock">
+                    <button type="button" onclick="open_dialog('footer', '#footerBlock')">
+                        &lt;footer&gt;&lt;/footer&gt;
+                    </button>
+                </div>
+                <div id="addressBlock">
+                    <button type="button" onclick="open_dialog('address', '#addressBlock')">
+                        &lt;address&gt;&lt;/address&gt;
+                    </button>    
+                </div>
             </div>
-            <div>
-                <button type="button" onclick="open_dialog('section')">
-                    &lt;section&gt;&lt;/section&gt;
-                </button>
+            <hr>
+            <h2>Группировка контента</h2>
+            <div class="wrapper" id="grouping-content">
+                <div>&lt;p&gt;&lt;/p&gt;</div>
+                <div>&lt;hr&gt;</div>
+                <div>&lt;pre&gt;&lt;/pre&gt;</div>
+                <div>&lt;blockquote&gt;&lt;/blockquote&gt;</div>
+                <div>&lt;ol&gt;&lt;/ol&gt;</div>
+                <div>&lt;ul&gt;&lt;/ul&gt;</div>
+                <div>&lt;menu&gt;&lt;/menu&gt;</div>
+                <div>&lt;li&gt;&lt;/li&gt;</div>
+                <div>&lt;dl&gt;&lt;/dl&gt;</div>
+                <div>&lt;dt&gt;&lt;/dt&gt;</div>
+                <div>&lt;dd&gt;&lt;/dd&gt;</div>
+                <div>&lt;figure&gt;&lt;/figure&gt;</div>
+                <div>&lt;figcaption&gt;&lt;/figcaption&gt;</div>
+                <div>&lt;main&gt;&lt;/main&gt;</div>
+                <div>&lt;search&gt;&lt;/search&gt;</div>
+                <div>&lt;div&gt;&lt;/div&gt;</div>
             </div>
-            <div>
-                <button type="button" onclick="open_dialog('nav')">
-                    &lt;nav&gt;&lt;/nav&gt;
-                </button>
+            <hr>
+            <h2>Семантика уровня текста</h2>
+            <div class="wrapper" id="text-level-semantics">
             </div>
-            <div>&lt;aside&gt;&lt;/aside&gt;</div>
-            <div>Заголовки &lt;h&gt;&lt;/h&gt;</div>
-            <div>&lt;hgroup&gt;&lt;/hgroup&gt;</div>
-            <div>&lt;header&gt;&lt;/header&gt;</div>
-            <div>&lt;footer&gt;&lt;/footer&gt;</div>
-            <div>&lt;address&gt;&lt;/address&gt;</div>
-        </div>
-        <hr>
-        <h2>Группировка контента</h2>
-        <div class="wrapper" id="grouping-content">
-            <div>&lt;p&gt;&lt;/p&gt;</div>
-            <div>&lt;hr&gt;</div>
-            <div>&lt;pre&gt;&lt;/pre&gt;</div>
-            <div>&lt;blockquote&gt;&lt;/blockquote&gt;</div>
-            <div>&lt;ol&gt;&lt;/ol&gt;</div>
-            <div>&lt;ul&gt;&lt;/ul&gt;</div>
-            <div>&lt;menu&gt;&lt;/menu&gt;</div>
-            <div>&lt;li&gt;&lt;/li&gt;</div>
-            <div>&lt;dl&gt;&lt;/dl&gt;</div>
-            <div>&lt;dt&gt;&lt;/dt&gt;</div>
-            <div>&lt;dd&gt;&lt;/dd&gt;</div>
-            <div>&lt;figure&gt;&lt;/figure&gt;</div>
-            <div>&lt;figcaption&gt;&lt;/figcaption&gt;</div>
-            <div>&lt;main&gt;&lt;/main&gt;</div>
-            <div>&lt;search&gt;&lt;/search&gt;</div>
-            <div>&lt;div&gt;&lt;/div&gt;</div>
-        </div>
-        <hr>
-        <h2>Семантика уровня текста</h2>
-        <div class="wrapper" id="text-level-semantics">
-
-        </div>
         </div>
     </main>
-    <template id="message-template">
+    <template id="messageTemplate">
         <dialog id="dialogWindow">
-            <p></p>
-            <button class="close-button" type="button" onclick="window.dialogWindow.close()">
+            <p id="message"></p>
+            <button class="close-button" type="button" onclick="dialogWindow.close()">
                 Закрыть
             </button>
         </dialog>
@@ -375,8 +398,8 @@
     <h2>Тег picture</h2>
     <p>picture - адаптирует картинки под разные устройства и поддерживаемые форматы.</p>
     <picture>
-        <source srcset="Вариация размеров картинки" media="(max-width: 800px)">
-        <img src="Стандартный размер картинки">
+        <source srcset="#Вариация размеров картинки" media="(max-width: 800px)">
+        <img src="#Стандартный размер картинки">
     </picture>
     <hr>
     <h2>Тег source</h2>

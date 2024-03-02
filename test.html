@@ -9,11 +9,10 @@
     <button type="button" onclick="open_window('Привет я здесь')">Нажми на меня</button>
     <dialog id="asd">Привет</dialog>
     <script>
-        const dialog = document.getElementById("asd");
-        
-        function open_window(string) {
-            dialog.innerHTML = string;
-            dialog.show();
+        if (typeof require !== 'undefined') {
+            console.log('require доступен');
+        } else {
+            console.log('require не доступен');
         }
     </script>
 </body>
