@@ -1,0 +1,20 @@
+{
+  "name": "html-tags.github.io",
+  "version": "1.0.0",
+  "description": "Полный список тегов, которые есть в HTML\r >[!NOTE]\r >Вы можете посмотреть данный проект при помощи GitHub Pages:\r >https://pxrpgill.github.io/html-tags.github.io/",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PxrpGill/html-tags.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PxrpGill/html-tags.github.io/issues"
+  },
+  "homepage": "https://github.com/PxrpGill/html-tags.github.io#readme",
+  "type": "module"
+}

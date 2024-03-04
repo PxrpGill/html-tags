@@ -71,26 +71,363 @@
             <hr>
             <h2>Группировка контента</h2>
             <div class="wrapper" id="grouping-content">
-                <div>&lt;p&gt;&lt;/p&gt;</div>
-                <div>&lt;hr&gt;</div>
-                <div>&lt;pre&gt;&lt;/pre&gt;</div>
-                <div>&lt;blockquote&gt;&lt;/blockquote&gt;</div>
-                <div>&lt;ol&gt;&lt;/ol&gt;</div>
-                <div>&lt;ul&gt;&lt;/ul&gt;</div>
-                <div>&lt;menu&gt;&lt;/menu&gt;</div>
-                <div>&lt;li&gt;&lt;/li&gt;</div>
-                <div>&lt;dl&gt;&lt;/dl&gt;</div>
-                <div>&lt;dt&gt;&lt;/dt&gt;</div>
-                <div>&lt;dd&gt;&lt;/dd&gt;</div>
-                <div>&lt;figure&gt;&lt;/figure&gt;</div>
-                <div>&lt;figcaption&gt;&lt;/figcaption&gt;</div>
-                <div>&lt;main&gt;&lt;/main&gt;</div>
-                <div>&lt;search&gt;&lt;/search&gt;</div>
-                <div>&lt;div&gt;&lt;/div&gt;</div>
+                <div id="pBlock">
+                    <button type="button" onclick="open_dialog('p', '#pBlock')">
+                        &lt;p&gt;&lt;/p&gt;
+                    </button>
+                </div>
+                <div id="hrBlock">
+                    <button type="button" onclick="open_dialog('hr', '#hrBlock')">
+                        &lt;hr&gt;
+                    </button>
+                </div>
+                <div id="preBlock">
+                    <button type="button" onclick="open_dialog('pre', '#preBlock')">
+                        &lt;pre&gt;&lt;/pre&gt;
+                    </button>
+                </div>
+                <div id="blockquoteBlock">
+                    <button type="button" onclick="open_dialog('blockquote', '#blockquoteBlock')">
+                        &lt;blockquote&gt;&lt;/blockquote&gt;
+                    </button>
+                </div>
+                <div id="olBlock">
+                    <button type="button" onclick="open_dialog('ol', '#olBlock')">
+                        &lt;ol&gt;&lt;/ol&gt;
+                    </button>
+                </div>
+                <div id="ulBlock">
+                    <button type="button" onclick="open_dialog('ul', '#ulBlock')">
+                        &lt;ul&gt;&lt;/ul&gt;
+                    </button>
+                </div>
+                <div id="menuBlock">
+                    <button type="button" onclick="open_dialog('menu', '#menuBlock')">
+                        &lt;menu&gt;&lt;/menu&gt;
+                    </button>
+                </div>
+                <div id="liBlock">
+                    <button type="button" onclick="open_dialog('li', '#liBlock')">
+                        &lt;li&gt;&lt;/li&gt;
+                    </button>
+                </div>
+                <div id="dlBlock">
+                    <button type="button" onclick="open_dialog('dl', '#dlBlock')">
+                        &lt;dl&gt;&lt;/dl&gt;
+                    </button>
+                </div>
+                <div id="dtBlock">
+                    <button type="button" onclick="open_dialog('dt', '#dtBlock')">
+                        &lt;dt&gt;&lt;/dt&gt;
+                    </button>
+                </div>
+                <div id="ddBlock">
+                    <button type="button" onclick="open_dialog('dd', '#ddBlock')">
+                        &lt;dd&gt;&lt;/dd&gt;
+                    </button>
+                </div>
+                <div id="figureBlock">
+                    <button type="button" onclick="open_dialog('figure', '#figureBlock')">
+                        &lt;figure&gt;&lt;/figure&gt;
+                    </button>
+                </div>
+                <div id="figcaptionBlock">
+                    <button type="button" onclick="open_dialog('figcaption', '#figcaptionBlock')">
+                        &lt;figcaption&gt;&lt;/figcaption&gt;
+                    </button>
+                </div>
+                <div id="mainBlock">
+                    <button type="button" onclick="open_dialog('main', '#mainBlock')">
+                        &lt;main&gt;&lt;/main&gt;
+                    </button>
+                </div>
+                <div id="searchBlock">
+                    <button type="button" onclick="open_dialog('search', '#searchBlock')">
+                        &lt;search&gt;&lt;/search&gt;
+                    </button>
+                </div>
+                <div id="divBlock">
+                    <button type="button" onclick="open_dialog('div', '#divBlock')">
+                        &lt;div&gt;&lt;/div&gt;
+                    </button>
+                </div>
             </div>
             <hr>
             <h2>Семантика уровня текста</h2>
             <div class="wrapper" id="text-level-semantics">
+                <div id="aBlock">
+                    <button type="button" onclick="open_dialog('a', '#aBlock')">
+                        &lt;a&gt;&lt;/a&gt;
+                    </button>
+                </div>
+                <div id="emBlock">
+                    <button type="button" onclick="open_dialog('em', '#emBlock')">
+                        &lt;em&gt;&lt;/em&gt;
+                    </button>
+                </div>
+                <div id="strongBlock">
+                    <button type="button" onclick="open_dialog('strong', '#strongBlock')">
+                        &lt;strong&gt;&lt;/strong&gt;
+                    </button>
+                </div>
+                <div id="smallBlock">
+                    <button type="button" onclick="open_dialog('small', '#smallBlock')">
+                        &lt;small&gt;&lt;/small&gt;
+                    </button>
+                </div>
+                <div id="sBlock">
+                    <button type="button" onclick="open_dialog('s', '#sBlock')">
+                        &lt;s&gt;&lt;/s&gt;
+                    </button>
+                </div>
+                <div id="citeBlock">
+                    <button type="button" onclick="open_dialog('cite', '#citeBlock')">
+                        &lt;cite&gt;&lt;/cite&gt;
+                    </button>
+                </div>
+                <div id="qBlock">
+                    <button type="button" onclick="open_dialog('q', '#qBlock')">
+                        &lt;q&gt;&lt;/q&gt;
+                    </button>
+                </div>
+                <div id="dfnBlock">
+                    <button type="button" onclick="open_dialog('dfn', '#dfnBlock')">
+                        &lt;dfn&gt;&lt;/dfn&gt;
+                    </button>
+                </div>
+                <div id="abbrBlock">
+                    <button type="button" onclick="open_dialog('abbr', '#abbrBlock')">
+                        &lt;abbr&gt;&lt;/abbr&gt;
+                    </button>
+                </div>
+                <div id="rubyBlock">
+                    <button type="button" onclick="open_dialog('ruby', '#rubyBlock')">
+                        &lt;ruby&gt;&lt;/ruby&gt;
+                    </button>
+                </div>
+                <div id="rtBlock">
+                    <button type="button" onclick="open_dialog('rt', '#rtBlock')">
+                        &lt;rt&gt;&lt;/rt&gt;
+                    </button>
+                </div>
+                <div id="rpBlock">
+                    <button type="button" onclick="open_dialog('rp', '#rpBlock')">
+                        &lt;rp&gt;&lt;/rp&gt;
+                    </button>
+                </div>
+                <div id="dataBlock">
+                    <button type="button" onclick="open_dialog('data', '#dataBlock')">
+                        &lt;data&gt;&lt;/data&gt;
+                    </button>
+                </div>
+                <div id="timeBlock">
+                    <button type="button" onclick="open_dialog('time', '#timeBlock')">
+                        &lt;time&gt;&lt;/time&gt;
+                    </button>
+                </div>
+                <div id="codeBlock">
+                    <button type="button" onclick="open_dialog('code', '#codeBlock')">
+                        &lt;code&gt;&lt;/code&gt;
+                    </button>
+                </div>
+                <div id="varBlock">
+                    <button type="button" onclick="open_dialog('var', '#varBlock')">
+                        &lt;var&gt;&lt;/var&gt;
+                    </button>
+                </div>
+                <div id="sampBlock">
+                    <button type="button" onclick="open_dialog('samp', '#sampBlock')">
+                        &lt;samp&gt;&lt;/samp&gt;
+                    </button>
+                </div>
+                <div id="kbdBlock">
+                    <button type="button" onclick="open_dialog('kbd', '#kbdBlock')">
+                        &lt;kbd&gt;&lt;/kbd&gt;
+                    </button>
+                </div>
+                <div id="subBlock">
+                    <button type="button" onclick="open_dialog('sub', '#subBlock')">
+                        &lt;sub&gt;&lt;/sub&gt;
+                    </button>
+                </div>
+                <div id="supBlock">
+                    <button type="button" onclick="open_dialog('sup', '#supBlock')">
+                        &lt;sup&gt;&lt;/sup&gt;
+                    </button>
+                </div>
+                <div id="iBlock">
+                    <button type="button" onclick="open_dialog('i', '#iBlock')">
+                        &lt;i&gt;&lt;/i&gt;
+                    </button>
+                </div>
+                <div id="bBlock">
+                    <button type="button" onclick="open_dialog('b', '#bBlock')">
+                        &lt;b&gt;&lt;/b&gt;
+                    </button>
+                </div>
+                <div id="uBlock">
+                    <button type="button" onclick="open_dialog('u', '#uBlock')">
+                        &lt;u&gt;&lt;/u&gt;
+                    </button>
+                </div>
+                <div id="markBlock">
+                    <button type="button" onclick="open_dialog('mark', '#markBlock')">
+                        &lt;mark&gt;&lt;/mark&gt;
+                    </button>
+                </div>
+                <div id="bdiBlock">
+                    <button type="button" onclick="open_dialog('bdi', '#bdiBlock')">
+                        &lt;bdi&gt;&lt;/bdi&gt;
+                    </button>
+                </div>
+                <div id="bdoBlock">
+                    <button type="button" onclick="open_dialog('bdo', '#bdoBlock')">
+                        &lt;bdo&gt;&lt;/bdo&gt;
+                    </button>
+                </div>
+                <div id="spanBlock">
+                    <button type="button" onclick="open_dialog('span', '#spanBlock')">
+                        &lt;span&gt;&lt;/span&gt;
+                    </button>
+                </div>
+                <div id="brBlock">
+                    <button type="button" onclick="open_dialog('br', '#brBlock')">
+                        &lt;br&gt;
+                    </button>
+                </div>
+                <div id="wbrBlock">
+                    <button type="button" onclick="open_dialog('wbr', '#wbrBlock')">
+                        &lt;wbr&gt;
+                    </button>
+                </div>
+            </div>
+            <hr>
+            <h2>Правки</h2>
+            <div class="wrapper" id="edits">
+                <div id="insBlock">
+                    <button type="button" onclick="open_dialog('ins', '#insBlock')">
+                        &lt;ins&gt;&lt;/ins&gt;
+                    </button>
+                </div>
+                <div id="delBlock">
+                    <button type="button" onclick="open_dialog('del', '#delBlock')">
+                        &lt;del&gt;&lt;/del&gt;
+                    </button>
+                </div>
+                <div id="pictureBlock">
+                    <button type="button" onclick="open_dialog('picture', '#pictureBlock')">
+                        &lt;picture&gt;&lt;/picture&gt;
+                    </button>
+                </div>
+                <div id="sourceBlock">
+                    <button type="button" onclick="open_dialog('source', '#sourceBlock')">
+                        &lt;source&gt;
+                    </button>
+                </div>
+                <div id="imgBlock">
+                    <button type="button" onclick="open_dialog('img', '#imgBlock')">
+                        &lt;img&gt;
+                    </button>
+                </div>
+                <div id="iframeBlock">
+                    <button type="button" onclick="open_dialog('iframe', '#iframeBlock')">
+                        &lt;iframe&gt;&lt;/iframe&gt;
+                    </button>
+                </div>
+                <div id="embedBlock">
+                    <button type="button" onclick="open_dialog('embed', '#embedBlock')">
+                        &lt;embed&gt;&lt;/embed&gt;
+                    </button>
+                </div>
+                <div id="objectBlock">
+                    <button type="button" onclick="open_dialog('object', '#objectBlock')">
+                        &lt;object&gt;&lt;/object&gt;
+                    </button>
+                </div>
+                <div id="videoBlock">
+                    <button type="button" onclick="open_dialog('video', '#videoBlock')">
+                        &lt;video&gt;
+                    </button>
+                </div>
+                <div id="audioBlock">
+                    <button type="button" onclick="open_dialog('audio', '#audioBlock')">
+                        &lt;audio&gt;
+                    </button>
+                </div>
+                <div id="trackBlock">
+                    <button type="button" onclick="open_dialog('track', '#trackBlock')">
+                        &lt;track&gt;&lt;/track&gt;
+                    </button>
+                </div>
+                <div id="mapBlock">
+                    <button type="button" onclick="open_dialog('map', '#mapBlock')">
+                        &lt;map&gt;&lt;/map&gt;
+                    </button>
+                </div>
+                <div id="areaBlock">
+                    <button type="button" onclick="open_dialog('area', '#areaBlock')">
+                        &lt;area&gt;&lt;/area&gt;
+                    </button>
+                </div>
+            </div>
+            <hr>
+            <h2>Табличные данные</h2>
+            <div class="wrapper" id="tabular-data">
+                <div id="tableBlock">
+                    <button type="button" onclick="open_dialog('table', '#tableBlock')">
+                        &lt;table&gt;&lt;/table&gt;
+                    </button>
+                </div>
+                <div id="captionBlock">
+                    <button type="button" onclick="open_dialog('caption', '#captionBlock')">
+                        &lt;caption&gt;&lt;/caption&gt;
+                    </button>
+                </div>
+                <div id="colgroupBlock">
+                    <button type="button" onclick="open_dialog('colgroup', '#colgroupBlock')">
+                        &lt;colgroup&gt;&lt;/colgroup&gt;
+                    </button>
+                </div>
+                <div id="colBlock">
+                    <button type="button" onclick="open_dialog('col', '#colBlock')">
+                        &lt;col&gt;&lt;/col&gt;
+                    </button>
+                </div>
+                <div id="tbodyBlock">
+                    <button type="button" onclick="open_dialog('tbody', '#tbodyBlock')">
+                        &lt;tbody&gt;&lt;/tbody&gt;
+                    </button>
+                </div>
+                <div id="theadBlock">
+                    <button type="button" onclick="open_dialog('thead', '#theadBlock')">
+                        &lt;thead&gt;&lt;/thead&gt;
+                    </button>
+                </div>
+                <div id="tfootBlock">
+                    <button type="button" onclick="open_dialog('tfoot', '#tfootBlock')">
+                        &lt;tfoot&gt;&lt;/tfoot&gt;
+                    </button>
+                </div>
+                <div id="trBlock">
+                    <button type="button" onclick="open_dialog('tr', '#trBlock')">
+                        &lt;tr&gt;&lt;/tr&gt;
+                    </button>
+                </div>
+                <div id="tdBlock">
+                    <button type="button" onclick="open_dialog('td', '#tdBlock')">
+                        &lt;td&gt;&lt;/td&gt;
+                    </button>
+                </div>
+                <div id="thBlock">
+                    <button type="button" onclick="open_dialog('th', '#thBlock')">
+                        &lt;em&gt;&lt;/em&gt;
+                    </button>
+                </div>
+            </div>
+            <hr>
+            <h2>Формы</h2>
+            <div class="wrapper" id="forms">
+
             </div>
         </div>
     </main>
@@ -102,10 +439,7 @@
             </button>
         </dialog>
     </template>
-    <script src="dialog.js"></script>
-
-
-
+    <script type="module" src="dialog.js"></script>
 
 
     <h2>Тег article</h2>
@@ -195,11 +529,7 @@
     <hr>
     <h2>Тег menu</h2>
     <p>menu - предназначен для отображения списка пунктов меню</p>
-    <menu>
-        <li>Пункт меню</li>
-        <li>Пункт меню</li>
-        <li>Пункт меню</li>
-    </menu>
+    <menu><li>Пункт меню</li><li>Пункт меню</li><li>Пункт меню</li></menu>
     <hr>
     <h2>Тег dl</h2>
     <!--dl - элемент списка описаний-->
@@ -211,10 +541,7 @@
     <hr>
     <h2>Тег figure</h2>
     <p>figure - Используется для группирования любых элементов, например, изображений и подписей к ним.</p>
-    <figure>
-        <img src="https://img.freepik.com/free-photo/close-up-on-adorable-kitten-indoors_23-2150782423.jpg">
-        <figcaption>Тег figcaption - используется для подписи группирования пар элементов</figcaption>
-    </figure>
+    <figure><img src="https://img.freepik.com/free-photo/close-up-on-adorable-kitten-indoors_23-2150782423.jpg"><figcaption>Тег figcaption - используется для подписи группирования пар элементов</figcaption></figure>
     <hr>
     <h2>Тег main</h2>
     <main>main - Предназначен для основного контента</main>
@@ -297,7 +624,7 @@
             </td>
         </tr>
     </table>
-    <img src="img/datajpg.jpg">
+    <img src="#">
     <hr>
     <h2>Тег time</h2>
     <p>time - помечает текст внутри тега как дата, время или оба значения</p>
@@ -405,7 +732,7 @@
     <h2>Тег source</h2>
     <p>source - вставляет звуковой или видеофайл для тегов audio и video. Обобщенно такие файлы называются медийными</p>
     <audio controls>
-        <source src="src/audio.mp3" type="audio/mpeg">
+        <source src="#" type="audio/mpeg">
         Ваш браузер не поддерживает этот элемент
     </audio>
     <video controls>
@@ -414,7 +741,7 @@
     <hr>
     <h2>Тег iframe</h2>
     <p> iframe - создает плавающий фрейм, который находится внутри обычного документа, он позволяет загружать в область заданных размеров любые другие независимые документы</p>
-    <iframe src="frame.html">Здесь указывается альтернативный текст, если фрейм игнорируется браузерами</iframe>
+    <iframe src="#">Здесь указывается альтернативный текст, если фрейм игнорируется браузерами</iframe>
     <hr>
     <h2>Тег embed</h2>
     <p>
@@ -423,7 +750,7 @@
         требуют подключения к браузеру специального модуля, который называется плагин,
         или запуска вспомогательной программы
     </p>
-    <embed src="" width="" height="" 
+    <embed src="#" width="" height="" 
            type="application/x-shockwave-flash"
            pluginspage="http://www.macromedia.com/go/getflashplayer"
     >
@@ -749,7 +1076,7 @@
     <hr>
     <h2>Тег template</h2>
     <p>template - предназначен для хранения «образца» разметки, невидимого и предназначенного для вставки куда-либо.</p>
-    <image src="img/код.jpg"></image>
+    <image src="#"></image>
     <template id="tmpl">
         <form>
             <input type="file">
