@@ -1,10 +1,10 @@
-import data from './data.json' assert {type: "json"};
+import data from './data.json' with {type: "json"};
 
 const message_sections = data;
-const templateNode = document.querySelector("#messageTemplate");
+const templateNode = document.getElementById("messageTemplate");
 const dialogTemplate = templateNode.content.cloneNode(true);
-const dialog = dialogTemplate.querySelector("#dialogWindow");
-const message = dialogTemplate.querySelector("p");
+const dialog = dialogTemplate.getElementById("dialogWindow");
+const message = dialogTemplate.getElementById("message");
 
 window.open_dialog = function (key, id) {
     const divBlock = document.querySelector(id);
