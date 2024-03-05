@@ -10,5 +10,5 @@ window.open_dialog = function (key, id) {
     const divBlock = document.querySelector(id);
     divBlock.append(dialogTemplate);
     message.innerHTML = message_sections[key];
-    dialog.showModal();
+    dialog.show();
 }
