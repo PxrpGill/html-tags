@@ -25,7 +25,7 @@
         const message = template.getElementById("message");
 
         window.open_modal = function () {
-            message.innerHTML = "Привет";
+            message.textContent = "Привет";
             const spot = document.getElementById("spot");
             spot.append(template);
             dialog.showModal();
