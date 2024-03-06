@@ -16,18 +16,21 @@
         </dialog>
     </template>
     <script type="module">
+        fetch('./main_page/data.json').then(response => response.json()).then(data => {
+            const data_messages = data;
+            const templateNode = document.getElementById("templateNode");
+            const template = templateNode.content.cloneNode(true);
+            const dialog = template.getElementById("modalWindow");
+            const message = template.getElementById("message");
 
-        const templateNode = document.getElementById("templateNode");
-        const template = templateNode.content.cloneNode(true);
-        const dialog = template.getElementById("modalWindow");
-        const message = template.getElementById("message");
-
-        window.open_modal = function () {
-            message.textContent = "Привет";
-            const spot = document.getElementById("spot");
-            spot.append(template);
-            dialog.showModal();
-        }
+            window.open_modal = function () {
+                console.log(data_messages['article']);
+                message.innerHTML = data_messages['article'];
+                const spot = document.getElementById("spot");
+                spot.append(template);
+                dialog.showModal();
+            }
+        })
     </script>
 </body>
 </html>
