@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>тестирование диалогового окна</title>
+</head>
+<body>
+    <div id="spot">
+        <button type="button" onclick="open_modal()">Открыть модальное окно</button>
+    </div>
+    <template id="templateNode">
+        <dialog id="modalWindow">
+            <p>Это Модальное окно</p>
+            <button type="button" onclick="modalWindow.close()">Закрыть</button>
+        </dialog>
+    </template>
+    <script>
+        const templateNode = document.getElementById("templateNode");
+        const template = templateNode.content.cloneNode(true);
+        const dialog = template.getElementById("modalWindow");
+
+        function open_modal() {
+            const spot = document.getElementById("spot");
+            spot.append(template);
+            dialog.showModal();
+        }
+    </script>
+</body>
+</html>
