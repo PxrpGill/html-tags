@@ -11,16 +11,21 @@
     </div>
     <template id="templateNode">
         <dialog id="modalWindow">
-            <p>Это Модальное окно</p>
+            <p id="message">Это Модальное окно</p>
             <button type="button" onclick="modalWindow.close()">Закрыть</button>
         </dialog>
     </template>
     <script type="module">
+        import data from './main_page/data.json' with {type: "json"};
+
+        const data_sel = data;
         const templateNode = document.getElementById("templateNode");
         const template = templateNode.content.cloneNode(true);
         const dialog = template.getElementById("modalWindow");
+        const message = template.getElementById("message");
 
         window.open_modal = function () {
+            message.innerHTML = data_sel['article'];
             const spot = document.getElementById("spot");
             spot.append(template);
             dialog.showModal();
