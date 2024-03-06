@@ -32,6 +32,12 @@ body {
     align-items: center;
     border: 1px black solid;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: .2s;
+}
+
+.wrapper div:hover {
+    transform: scale(1.1);
+    transition: .2s;
 }
 
 .block {
@@ -48,6 +54,12 @@ button {
     border: none;
     width: 80%;
     height: 80%;
+    transition: .2s;
+}
+
+button:hover {
+    transform: scale(1.3);
+    transition: .2s;
 }
 
 dialog {
