@@ -15,12 +15,12 @@
             <button type="button" onclick="modalWindow.close()">Закрыть</button>
         </dialog>
     </template>
-    <script>
+    <script type="module">
         const templateNode = document.getElementById("templateNode");
         const template = templateNode.content.cloneNode(true);
         const dialog = template.getElementById("modalWindow");
 
-        function open_modal() {
+        window.open_modal = function () {
             const spot = document.getElementById("spot");
             spot.append(template);
             dialog.showModal();
