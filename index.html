@@ -427,7 +427,44 @@
             <hr>
             <h2>Формы</h2>
             <div class="wrapper" id="forms">
-
+                <div id="formBlock">
+                    <button type="button" onclick="open_dialog('form', '#formBlock')">
+                        &lt;form&gt;&lt;/form&gt;
+                    </button>
+                </div>
+                <div id="labelBlock">
+                    <button type="button" onclick="open_dialog('label', '#labelBlock')">
+                        &lt;label&gt;&lt;/label&gt;
+                    </button>
+                </div>
+            </div>
+            <h3>Input'ы</h3>
+            <div class="wrapper" id="inputs">
+                <div id="inputTextBlock">
+                    <button type="button" onclick="open_dialog('inputText', '#inputTextBlock')">
+                        &lt;input type="text/tel/email"&gt;&lt;/input&gt;
+                    </button>
+                </div>
+                <div id="inputDateBlock">
+                    <button type="button" onclick="open_dialog('inputDate', '#inputDateBlock')">
+                        &lt;input type="date/month/week/time/datetime-local"&gt;&lt;/input&gt;
+                    </button>
+                </div>
+                <div id="inputNumBlock">
+                    <button type="button" onclick="open_dialog('inputNum', '#inputNumBlock')">
+                        &lt;input type="number/range"&gt;&lt;/input&gt;
+                    </button>
+                </div>
+                <div id="inputColorBlock">
+                    <button type="button" onclick="open_dialog('inputColor', '#inputColorBlock')">
+                        &lt;input type="color"&gt;&lt;/input&gt;
+                    </button>
+                </div>
+                <div id="inputRadioBlock">
+                    <button type="button" onclick="open_dialog('inputRadio', '#inputRadioBlock')">
+                        &lt;input type="radio/checkbox"&gt;&lt;/input&gt;
+                    </button>
+                </div>
             </div>
         </div>
     </main>
