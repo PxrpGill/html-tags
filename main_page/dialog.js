@@ -4,6 +4,7 @@ fetch('./main_page/data.json').then(response => response.json()).then(data => {
     const dialogTemplate = templateNode.content.cloneNode(true);
     const dialog = dialogTemplate.getElementById("dialogWindow");
     const message = dialogTemplate.getElementById("message");
+    const closeButton = document.querySelector('.close-button');
 
     window.open_dialog = function (key, id) {
         const divBlock = document.querySelector(id);
