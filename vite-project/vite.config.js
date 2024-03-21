@@ -7,7 +7,7 @@ export default {
         Inspect(),
         createHtmlPlugin({
             filename: "index.html",
-            template: "index.html",
+            template: "./index.html",
             minify: true,
         }),
         createHtmlPlugin({
