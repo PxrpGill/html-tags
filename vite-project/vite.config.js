@@ -1,7 +1,7 @@
 import Inspect from 'vite-plugin-inspect';
 
 export default {
-    base: "/",
+    base: "/html-tags.github.io",
     plugins: [
         Inspect(),
     ],
