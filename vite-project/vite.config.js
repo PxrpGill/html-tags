@@ -6,7 +6,6 @@ export default {
     plugins: [
         Inspect(),
         createHtmlPlugin({
-            entry: "main.js",
             filename: "index.html",
             template: "index.html",
             minify: true,
