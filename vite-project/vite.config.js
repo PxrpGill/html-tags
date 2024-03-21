@@ -9,6 +9,9 @@ export default {
             filename: "index.html",
             template: "main_page/index.html",
             minify: true,
+            head: [
+                { tag: 'meta', attrs: { name: 'canonical', content: '/' } }
+              ]
         }),
         createHtmlPlugin({
             filename: "file_loader.html",
