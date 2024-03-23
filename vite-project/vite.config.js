@@ -12,6 +12,9 @@ export default {
             scripts: [
                 {src: "./main.js", type: "module"},
             ],
+            head:  [
+                { tag: 'meta', attrs: { name: 'canonical', content: '/' } }
+              ]
         }),
         createHtmlPlugin({
             filename: "file_loader.html",
