@@ -7,7 +7,7 @@ export default {
         Inspect(),
         createHtmlPlugin({
             filename: "index.html",
-            template: "main_page/index.html",
+            template: "./index.html",
             minify: true,
             head: [
                 { tag: 'meta', attrs: { name: 'canonical', content: '/' } }
