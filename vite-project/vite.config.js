@@ -6,19 +6,21 @@ export default {
     plugins: [
         Inspect(),
         createHtmlPlugin({
-            title: "Index_Page",
-            template: "../index.html",
             minify: true,
-        }),
-        createHtmlPlugin({
-            title: "W3C",
-            template: "../w3c/w3c_page.html",
-            minify: true,
-        }),
-        createHtmlPlugin({
-            title: "Just Page",
-            template: "../just_page/just_page.html",
-            minify: true
-        }),
+            pages: [
+                {
+                    filename: "Main Page",
+                    template: "index.html"
+                },
+                {
+                    filename: "W3C",
+                    template: "w3c/w3c_page.html"
+                },
+                {
+                    filename: "File Loader",
+                    template: "file_loader/file_loader.html"
+                }
+            ]
+        })
     ],
 }; 
