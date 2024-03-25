@@ -5,6 +5,8 @@ const fileProgress = fileProgressTemplate.getElementById('file-progress');
 const progressBarContainer = document.getElementById('progress-bar-container');
 const fileList = document.getElementById('file-list');
 
+const BITES = 1024;
+
 
 function deleteFile(index) {
     let files = Array.from(input.files);
@@ -23,7 +25,7 @@ input.addEventListener('change', function() {
         let fileSize = 0;
         for (let i = 0; i < this.files.length; i++) {
             const currentFile = this.files[i];
-            fileSize = currentFile.size / 1024;
+            fileSize = currentFile.size / BITES;
 
             const li = document.createElement('li');
             li.textContent = currentFile.name + ' ' + fileSize.toFixed(2) + ' KB';
