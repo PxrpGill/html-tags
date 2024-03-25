@@ -16,8 +16,8 @@ export default {
             minify: true,
         }),
         createHtmlPlugin({
-            title: "File_Loader",
-            template: "../../file_loader/file_loader.html",
+            title: "Just Page",
+            template: "../just_page/just_page.html",
             minify: true
         }),
     ],
