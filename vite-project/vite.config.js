@@ -18,7 +18,10 @@ export default {
                 },
                 {
                     filename: "File Loader",
-                    template: "file_loader/file_loader.html"
+                    template: "file_loader/file_loader.html",
+                    scripts: [
+                        { src: 'file_loader/loader.js', type: 'module' },
+                      ],
                 }
             ]
         })
