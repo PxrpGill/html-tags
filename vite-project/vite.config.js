@@ -6,7 +6,7 @@ export default {
     plugins: [
         Inspect(),
         createHtmlPlugin({
-            title: "Index Page",
+            title: "Index_Page",
             template: "../index.html",
             minify: true,
         }),
@@ -16,9 +16,9 @@ export default {
             minify: true,
         }),
         createHtmlPlugin({
-            title: "File Loader",
-            template: "../file_loader/file_loader.html",
+            title: "File_Loader",
+            template: "../../file_loader/file_loader.html",
             minify: true
-        })
+        }),
     ],
 }; 
