@@ -1,0 +1,29 @@
+    import Inspect from 'vite-plugin-inspect';
+    import { createHtmlPlugin } from 'vite-plugin-html';
+
+    export default {
+        base: "/html-tags/",
+        plugins: [
+            Inspect(),
+            createHtmlPlugin({
+                minify: true,
+                pages: [
+                    {
+                        filename: "index.html",
+                        template: "index.html"
+                    },
+                    {
+                        filename: "w3c_page.html",
+                        template: "w3c/w3c_page.html"
+                    },
+                    {
+                        filename: "file_loader.html",
+                        template: "file_loader/file_loader.html",
+                        scripts: [
+                            { src: 'file_loader/loader.js', type: 'module' },
+                        ],
+                    }
+                ]
+            })
+        ],
+    }; 
