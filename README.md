@@ -3,7 +3,7 @@
 Полный список тегов, которые есть в HTML
 >[!NOTE]
 >Вы можете посмотреть данный проект при помощи GitHub Pages:
->https://pxrpgill.github.io/html-tags.github.io/
+>https://pxrpgill.github.io/html-tags/
 
 # Sections
 1. The body element
