@@ -1,38 +1,67 @@
-body {
-    margin: 0 auto;
+@font-face {
+    font-family: Regular;
+    src: url("./public/resources/fonts/bebas-neue-bold.ttf");
+    font-weight: 400;
+}
+
+* {
+    margin: 0 auto;  
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+    background: #24305e;
+}
+
+h1 {
+    color: #fff;    
+}
+
+li {
+    font-size: 16px;
+}
+
 #main-header {
-    background: rgb(133, 164, 225);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
+    background: #374785;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+}
+
+.container {
+    width: 80%;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.block {
+    display: inline-block;
 }
 
 #header-menu li {
     display: inline;
-    padding: 30px;
-}
-
-#header-menu li a { 
-    color: black;
-    text-decoration: none;
+    margin-left: 20px;
 }
 
 .wrapper {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-auto-rows: 100px;
+    grid-template-columns: repeat(5, 0.5fr);
+    grid-auto-rows: 150px;
+    width: 100%;
 }
 
 .wrapper div {
-    background: rgb(229, 163, 167);
     margin: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border-radius: 20px;    
     border: 1px black solid;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    background: #a8d0e6;
     transition: .2s;
+    display: flex;
+
 }
 
 .wrapper div:hover {
@@ -40,45 +69,62 @@ body {
     transition: .2s;
 }
 
-.block {
-    display: inline-block;
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
+.preview-card {
+    width: 100%;
+    background: #f76c6c;
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;    
+    height: 100%;
 }
 
-button {
-    background: none;
+.preview-card h2 {
+    color: #fff;
+}   
+
+.card-button {
+    color: black;
     border: none;
-    width: 80%;
-    height: 80%;
-    transition: .2s;
+    background: none;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
     cursor: pointer;
-}
-
-button:hover {
-    transform: scale(1.3);
-    transition: .2s;
 }
 
 #dialogWindow {
     border-radius: 45px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    background: rgb(255, 255, 255);
+    background: #f8e9a1;
     animation: fadeIn 0.3s ease-in-out;
+    top: 20%;
+    max-width: 80%;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+#dialogWindow p {
+    font-size: 20px;
 }
 
-.close-button {
-    color: red;
+#dialogWindow a {
+    color: black;
+}
+
+#dialogWindow li {
+    font-size: 20px;
+}
+
+#dialogWindow button {
+    color: black;
+    margin-top: 20px;
+    width: 100px;
+    cursor: pointer;
 }
