@@ -9,6 +9,25 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #374785;
+    box-shadow: 0 0 2 rgba(0, 0, 0, 0.5) inset;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f76c6c;
+    border-radius: 30px;
+    border: 3px solid #374785
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #b14a4a;
+}
+
 body {
     background: #24305e;
 }
@@ -71,7 +90,7 @@ a {
 
 .content-wrapper {
     display: grid;
-    grid-template-columns: 12% 98%;
+    grid-template-columns: 12% 88%;
     margin-bottom: 20px;
     margin-top: 20px;
 }
