@@ -461,12 +461,37 @@
           </div>
           <div id="inputDateBlock">
             <button class="card-button" type="button" onclick="open_dialog('inputDate', '#inputDateBlock')">
-              &lt;input type="date/ month/ week/ time/ datetime-local"&gt;
+              &lt;input type="date"&gt;
             </button>
           </div>
-          <div id="inputNumBlock">
-            <button class="card-button" type="button" onclick="open_dialog('inputNum', '#inputNumBlock')">
-              &lt;input type="number/ range"&gt;
+          <div id="inputMonthBlock">
+            <button class="card-button" type="button" onclick="open_dialog('inputMonth', '#inputMonthBlock')">
+              &lt;input type="month"&gt;
+            </button>
+          </div>
+          <div id="inputWeekBlock">
+            <button class="card-button" type="button" onclick="open_dialog('inputWeek', '#inputWeekBlock')">
+              &lt;input type="week"&gt;
+            </button>
+          </div>
+          <div id="inputTimeBlock">
+            <button class="card-button" type="button" onclick="open_dialog('inputTime', '#inputTimeBlock')">
+              &lt;input type="time"&gt;
+            </button>
+          </div>
+          <div id="inputDateTime-LocalBlock">
+            <button class="card-button" type="button" onclick="open_dialog('inputDateTime-Local', 'inputDateTime-LocalBlock')">
+              &lt;input type="datetime-local"&gt;
+            </button>
+          </div>
+          <div id="inputNumberBlock">
+            <button class="card-button" type="button" onclick="open_dialog('inputNumber', '#inputNumberBlock')">
+              &lt;input type="number"&gt;
+            </button>
+          </div>
+          <div id="inputRangeBlock">
+            <button class="card-button" type="button" onclick="open_dialog('inputRange', '#inputRangeBlock')">
+              &lt;input type="range"&gt;
             </button>
           </div>
           <div id="inputColorBlock">
@@ -476,11 +501,146 @@
           </div>
           <div id="inputRadioBlock">
             <button class="card-button" type="button" onclick="open_dialog('inputRadio', '#inputRadioBlock')">
-              &lt;input type="radio/checkbox"&gt;
+              &lt;input type="radio"&gt;
+            </button>
+          </div>
+          <div id="inputCheckBoxBlock">
+            <button class="card-button" type="button" onclick="open_dialog('inputChekBox', '#inputCheckBoxBlock')">
+              &lt;input type="checkbox"&gt;
+            </button>
+          </div>
+          <div id="inputFileBlock">
+            <button class="card-button" type="button" onclick="open_dialog('inputFile', '#inputFileBlock')">
+              &lt;input type="file"&gt;
+            </button>
+          </div>
+          <div id="inputSubmitBlock">
+            <button class="card-button" type="button" onclick="open_dialog('inputSubmit', '#inputSubmitBlock')">
+              &lt;input type="Submit"&gt;
+            </button>
+          </div>
+          <div id="inputImageBlock">
+            <button class="card-button" type="button" onclick="open_dialog('inputImage', '#inputImageBlock')">
+              &lt;input type="image"&gt;
+            </button>
+          </div>
+          <div id="inputResetBlock">
+            <button class="card-button" type="button" onclick="open_dialog('inputReset', '#inputResetBlock')">
+              &lt;input type="reset"&gt;
+            </button>
+          </div>
+          <div id="inputButtonBlock">
+            <button class="card-button" type="button" onclick="open_dialog('inputButton', '#inputButtonBlock')">
+              &lt;input type="button"&gt;
+            </button>
+          </div>
+          <div id="buttonBlock">
+            <button class="card-button" type="button" onclick="open_dialog('button', '#buttonBlock')">
+              &lt;button&gt;&lt;/button&gt;
+            </button>
+          </div>
+          <div id="selectBlock">
+            <button class="card-button" type="button" onclick="open_dialog('select', '#selectBlock')">
+              &lt;select&gt;&lt;/select&gt;
+            </button>
+          </div>
+          <div id="datalistBlock">
+            <button class="card-button" type="button" onclick="open_dialog('datalist', '#datalistBlock')">
+              &lt;datalist&gt;&lt;/datalist&gt;
+            </button>
+          </div>
+          <div id="optgroupBlock">
+            <button class="card-button" type="button" onclick="open_dialog('optgroup', '#optgroupBlock')">
+              &lt;optgroup&gt;&lt;/optgroup&gt;
+            </button>
+          </div>
+          <div id="optionBlock">
+            <button class="card-button" type="button" onclick="open_dialog('option', '#optionBlock')">
+              &lt;option&gt;&lt;/option&gt;
+            </button>
+          </div>
+          <div id="textareaBlock">
+            <button class="card-button" type="button" onclick="open_dialog('textarea', '#textareaBlock')">
+              &lt;textarea&gt;&lt;/textarea&gt;
+            </button>
+          </div>
+          <div id="outputBlock">
+            <button class="card-button" type="button" onclick="open_dialog('output', '#outputBlock')">
+              &lt;output&gt;&lt;/output&gt;
+            </button>
+          </div>
+          <div id="progressBlock">
+            <button class="card-button" type="button" onclick="open_dialog('progress', '#progressBlock')">
+              &lt;progress&gt;&lt;/progress&gt;
+            </button>
+          </div>  
+          <div id="meterBlock">
+            <button class="card-button" type="button" onclick="open_dialog('meter', '#meterBlock')">
+              &lt;meter&gt;&lt;/meter&gt;
+            </button>
+          </div>
+          <div id="fieldsetBlock">
+            <button class="card-button" type="button" onclick="open_dialog('fieldset', '#fieldsetBlock')">
+              &lt;fieldset&gt;&lt;/fieldset&gt;
+            </button>
+          </div>
+          <div id="legendBlock">
+            <button class="card-button" type="button" onclick="open_dialog('legend', '#legendBlock')">
+              &lt;button&gt;&lt;/button&gt;
             </button>
           </div>
         </div>
         <div class="preview-card"><h2>Формы</h2></div>
+      </div>
+      <div class="content-wrapper-left">
+        <div class="preview-card"><h2>Интера<wbr>ктивные<br>элементы</h2></div>
+        <div class="wrapper" id="interactive-elements">
+          <div id="detailsBlock">
+            <button class="card-button" type="button" onclick="open_dialog('details', '#detailsBlock')">
+              &lt;details&gt;&lt;/details&gt;
+            </button>
+          </div>
+          <div id="summaryBlock">
+            <button class="card-button" type="button" onclick="open_dialog('summary', '#summaryBlock')">
+              &lt;summary&gt;&lt;/summary&gt;
+            </button>
+          </div>
+          <div id="dialogBlock">
+            <button class="card-button" type="button" onclick="open_dialog('dialog', '#dialogBlock')">
+              &lt;dialog&gt;&lt;/dialog&gt;
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="content-wrapper-right">
+        <div class="wrapper" id="scripting">
+          <div id="scriptBlock">
+            <button class="card-button" type="button" onclick="open_dialog('script', '#ScriptBlock')">
+              &lt;script&gt;&lt;/script&gt;
+            </button>
+          </div>
+          <div id="noscriptBlock">
+            <button class="card-button" type="button" onclick="open_dialog('noscript', '#noscriptBlock')">
+              &lt;noscript&gt;&lt;/noscript&gt;
+            </button>
+          </div>
+          <div id="templateBlock">
+            <button class="card-button" type="button" onclick="open_dialog('template', '#templateBlock')">
+              &lt;template&gt;&lt;/template&gt;
+            </button>
+          </div>
+          <div id="slotBlock">
+            <button class="card-button" type="button" onclick="open_dialog('slot', '#slotBlock')">
+              &lt;slot&gt;&lt;/slot&gt;
+            </button>
+          </div>
+          <div id="canvasBlock">
+            <button class="card-button" type="button" onclick="open_dialog('canvas', '#canvasBlock')">
+              &lt;canvas&gt;&lt;/canvas&gt;
+            </button>
+          </div>
+        </div>
+        <div class="preview-card"><h2>Сценарии</h2></div>
       </div>
     </div>
   </main>

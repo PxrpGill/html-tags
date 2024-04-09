@@ -149,7 +149,6 @@ a {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     background: #f8e9a1;
     animation: fadeIn 0.3s ease-in-out;
-    top: 20%;
     max-width: 80%;
     animation: fadeIn 0.3s ease-in-out;
 }
