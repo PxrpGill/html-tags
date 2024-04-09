@@ -67,9 +67,26 @@ a {
 
 .wrapper {
     display: grid;
-    grid-template-columns: repeat(5, 0.5fr);
+    grid-template-columns: repeat(4, 0.5fr);
     grid-auto-rows: 150px;
     width: 100%;
+}
+
+.form-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 0.5fr);
+    grid-auto-rows: 150px;
+    width: 100%;
+}
+
+.form-wrapper div {
+    margin: 20px;
+    border-radius: 20px;    
+    border: 1px black solid;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    background: #a8d0e6;
+    transition: .2s;
+    display: flex;
 }
 
 .wrapper div {
@@ -80,7 +97,6 @@ a {
     background: #a8d0e6;
     transition: .2s;
     display: flex;
-
 }
 
 .wrapper div:hover {
@@ -88,12 +104,20 @@ a {
     transition: .2s;
 }
 
-.content-wrapper {
+.content-wrapper-left {
     display: grid;
-    grid-template-columns: 12% 88%;
+    grid-template-columns: 15% 85%;
     margin-bottom: 20px;
     margin-top: 20px;
 }
+
+.content-wrapper-right {
+    display: grid;
+    grid-template-columns: 85% 15%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
 
 .preview-card {
     width: 100%;

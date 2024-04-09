@@ -22,7 +22,7 @@
   </header>
   <main>
     <div class="container">
-      <div class="content-wrapper">
+      <div class="content-wrapper-left">
         <div class="preview-card"><h2>Разделы</h2></div>
         <div class="wrapper" id="sections">
           <div id="articleBlock">
@@ -72,8 +72,7 @@
           </div>
         </div>  
       </div>
-      <div class="content-wrapper">
-        <div class="preview-card"><h2>Группировка<br> контента</h2></div>
+      <div class="content-wrapper-right">
         <div class="wrapper" id="grouping-content">
           <div id="pBlock">
             <button class="card-button" type="button" onclick="open_dialog('p', '#pBlock')">
@@ -156,8 +155,9 @@
             </button>
           </div>
         </div>
+        <div class="preview-card"><h2>Группировка<br>контента</h2></div>
       </div>
-      <div class="content-wrapper">
+      <div class="content-wrapper-left">
         <div class="preview-card"><h2>Семантика<br>уровня<br>текста</h2></div>
         <div class="wrapper" id="text-level-semantics">
           <div id="aBlock">
@@ -307,8 +307,7 @@
           </div>
         </div>
       </div>
-      <div class="content-wrapper">
-        <div class="preview-card"><h2>Правки</h2></div>
+      <div class="content-wrapper-right">
         <div class="wrapper" id="edits">
           <div id="insBlock">
             <button class="card-button" type="button" onclick="open_dialog('ins', '#insBlock')">
@@ -376,8 +375,9 @@
             </button>
           </div>
         </div>
+        <div class="preview-card"><h2>Правки</h2></div>
       </div>
-      <div class="content-wrapper">
+      <div class="content-wrapper-left">
         <div class="preview-card"><h2>Табличные<br>данные</h2></div>
         <div class="wrapper" id="tabular-data">
           <div id="tableBlock">
@@ -432,8 +432,7 @@
           </div>
         </div>
       </div>
-      <div class="content-wrapper">
-        <div class="preview-card"><h2>Формы</h2></div>
+      <div class="content-wrapper-right">
         <div class="wrapper" id="forms">
           <div id="formBlock">
             <button class="card-button" type="button" onclick="open_dialog('form', '#formBlock')">
@@ -447,38 +446,48 @@
           </div>
           <div id="inputTextBlock">
             <button class="card-button" type="button" onclick="open_dialog('inputText', '#inputTextBlock')">
-              &lt;input type="text/tel/email"&gt;&lt;/input&gt;
+              &lt;input type="text"&gt;
+            </button>
+          </div>
+          <div id="inputTelBlock">
+            <button class="card-button" type="button" onclick="open_dialog('inputTel', '#inputTelBlock')">
+              &lt;input type="tel"&gt;
+            </button>
+          </div>
+          <div id="inputEmailBlock">
+            <button class="card-button" type="button" onclick="open_dialog('inputEmail', '#inputEmailBlock')">
+              &lt;input type="email"&gt;
             </button>
           </div>
           <div id="inputDateBlock">
             <button class="card-button" type="button" onclick="open_dialog('inputDate', '#inputDateBlock')">
-              &lt;input type="date/month/week/time/datetime-local"&gt;&lt;/input&gt;
+              &lt;input type="date/ month/ week/ time/ datetime-local"&gt;
             </button>
           </div>
           <div id="inputNumBlock">
             <button class="card-button" type="button" onclick="open_dialog('inputNum', '#inputNumBlock')">
-              &lt;input type="number/range"&gt;&lt;/input&gt;
+              &lt;input type="number/ range"&gt;
             </button>
           </div>
           <div id="inputColorBlock">
             <button class="card-button" type="button" onclick="open_dialog('inputColor', '#inputColorBlock')">
-              &lt;input type="color"&gt;&lt;/input&gt;
+              &lt;input type="color"&gt;
             </button>
           </div>
           <div id="inputRadioBlock">
             <button class="card-button" type="button" onclick="open_dialog('inputRadio', '#inputRadioBlock')">
-              &lt;input type="radio/checkbox"&gt;&lt;/input&gt;
+              &lt;input type="radio/checkbox"&gt;
             </button>
           </div>
         </div>
-        </div>
+        <div class="preview-card"><h2>Формы</h2></div>
       </div>
     </div>
   </main>
   <template id="messageTemplate">
     <dialog id="dialogWindow">
       <p id="message"></p>
-      <button class="close-button" type="button" onclick="close_dailog()">
+      <button class="close-button" type="button">
         Закрыть
       </button>
     </dialog>
