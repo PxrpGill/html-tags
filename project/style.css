@@ -202,3 +202,44 @@ a {
     width: 100px;
     cursor: pointer;
 }
+
+@media screen and (max-width: 1200px) {
+    .wrapper {
+        grid-template-columns: repeat(3, 0.5fr);
+    }
+    
+    .content-wrapper-left {
+        grid-template-columns: 30% 70%;
+    }
+
+    .content-wrapper-right {
+        grid-template-columns: 70% 30%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .preview-card h2 {
+        font-size: 14px;
+    }
+
+    .content-wrapper-left {
+        display:inline;
+    }
+
+    .content-wrapper-right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .preview-card {
+        order: 1;
+    }
+
+    .wrapper {
+        order: 2;
+    }
+
+    .wrapper {
+        grid-template-columns: repeat(2, 0.5fr);
+    }
+}
