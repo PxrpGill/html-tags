@@ -1,10 +1,10 @@
 .card {
     width: 30%;
     border: 1px solid black;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 5px var(--shadow-color);
     border-radius: 20px;
     margin-top: 30px;
-    background-color: #f76c6c;
+    background-color: var(--title-content-color);
     padding: 30px;
 }
 
