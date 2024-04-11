@@ -82,23 +82,6 @@ a {
     width: 100%;
 }
 
-.form-wrapper {
-    display: grid;
-    grid-template-columns: repeat(4, 0.5fr);
-    grid-auto-rows: 150px;
-    width: 100%;
-}
-
-.form-wrapper div {
-    margin: 20px;
-    border-radius: 20px;    
-    border: 1px black solid;
-    box-shadow: 0 0 5px var(--shadow-color);
-    background: var(--place-content-color);
-    transition: .2s;
-    display: flex;
-}
-
 .wrapper div {
     margin: 20px;
     border-radius: 20px;    
