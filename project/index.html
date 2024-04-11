@@ -22,458 +22,637 @@
   </header>
   <main>
     <div class="container">
-      <h2>Разделы</h2>
-      <div class="wrapper" id="sections">
-        <div id="articleBlock">
-          <button type="button" onclick="open_dialog('article', '#articleBlock')">
-            &lt;article&gt;&lt;/article&gt;
-          </button>
+      <div class="content-wrapper-left">
+        <div class="preview-card"><h2>Разделы</h2></div>
+        <div class="wrapper" id="sections">
+          <div id="articleBlock">
+            <button class="card-button" type="button" onclick="open_dialog('article', '#articleBlock')">
+              &lt;article&gt;&lt;/article&gt;
+            </button>
+          </div>
+          <div id="sectionBlock">
+            <button class="card-button" type="button" onclick="open_dialog('section', '#sectionBlock')">
+              &lt;section&gt;&lt;/section&gt;
+            </button>
+          </div>
+          <div id="navBlock">
+            <button class="card-button" type="button" onclick="open_dialog('nav', '#navBlock')">
+              &lt;nav&gt;&lt;/nav&gt;
+            </button>
+          </div>
+          <div id="asideBlock">
+            <button class="card-button" type="button" onclick="open_dialog('aside', '#asideBlock')">
+              &lt;aside&gt;&lt;/aside&gt;
+            </button>
+          </div>
+          <div id="hBlock">
+            <button class="card-button" type="button" onclick="open_dialog('h', '#hBlock')">
+              Заголовки &lt;h&gt;&lt;/h&gt;
+            </button>
+          </div>
+          <div id="hgroupBlock">
+            <button class="card-button" type="button" onclick="open_dialog('hgroup', '#hgroupBlock')">
+              &lt;hgroup&gt;&lt;/hgroup&gt;
+            </button>
+          </div>
+          <div id="headerBlock">
+            <button class="card-button" type="button" onclick="open_dialog('header', '#headerBlock')">
+              &lt;header&gt;&lt;/header&gt;
+            </button>
+          </div>
+          <div id="footerBlock">
+            <button class="card-button" type="button" onclick="open_dialog('footer', '#footerBlock')">
+              &lt;footer&gt;&lt;/footer&gt;
+            </button>
+          </div>
+          <div id="addressBlock">
+            <button class="card-button" type="button" onclick="open_dialog('address', '#addressBlock')">
+              &lt;address&gt;&lt;/address&gt;
+            </button>
+          </div>
+        </div>  
+      </div>
+      <div class="content-wrapper-right">
+        <div class="wrapper" id="grouping-content">
+          <div id="pBlock">
+            <button class="card-button" type="button" onclick="open_dialog('p', '#pBlock')">
+              &lt;p&gt;&lt;/p&gt;
+            </button>
+          </div>
+          <div id="hrBlock">
+            <button class="card-button" type="button" onclick="open_dialog('hr', '#hrBlock')">
+              &lt;hr&gt;
+            </button>
+          </div>
+          <div id="preBlock">
+            <button class="card-button" type="button" onclick="open_dialog('pre', '#preBlock')">
+              &lt;pre&gt;&lt;/pre&gt;
+            </button>
+          </div>
+          <div id="blockquoteBlock">
+            <button class="card-button" type="button" onclick="open_dialog('blockquote', '#blockquoteBlock')">
+              &lt;blockquote&gt;&lt;/blockquote&gt;
+            </button>
+          </div>
+          <div id="olBlock">
+            <button class="card-button" type="button" onclick="open_dialog('ol', '#olBlock')">
+              &lt;ol&gt;&lt;/ol&gt;
+            </button>
+          </div>
+          <div id="ulBlock">
+            <button class="card-button" type="button" onclick="open_dialog('ul', '#ulBlock')">
+              &lt;ul&gt;&lt;/ul&gt;
+            </button>
+          </div>
+          <div id="menuBlock">
+            <button class="card-button" type="button" onclick="open_dialog('menu', '#menuBlock')">
+              &lt;menu&gt;&lt;/menu&gt;
+            </button>
+          </div>
+          <div id="liBlock">
+            <button class="card-button" type="button" onclick="open_dialog('li', '#liBlock')">
+              &lt;li&gt;&lt;/li&gt;
+            </button>
+          </div>
+          <div id="dlBlock">
+            <button class="card-button" type="button" onclick="open_dialog('dl', '#dlBlock')">
+              &lt;dl&gt;&lt;/dl&gt;
+            </button>
+          </div>
+          <div id="dtBlock">
+            <button class="card-button" type="button" onclick="open_dialog('dt', '#dtBlock')">
+              &lt;dt&gt;&lt;/dt&gt;
+            </button>
+          </div>
+          <div id="ddBlock">
+            <button class="card-button" type="button" onclick="open_dialog('dd', '#ddBlock')">
+              &lt;dd&gt;&lt;/dd&gt;
+            </button>
+          </div>
+          <div id="figureBlock">
+            <button class="card-button" type="button" onclick="open_dialog('figure', '#figureBlock')">
+              &lt;figure&gt;&lt;/figure&gt;
+            </button>
+          </div>
+          <div id="figcaptionBlock">
+            <button class="card-button" type="button" onclick="open_dialog('figcaption', '#figcaptionBlock')">
+              &lt;figcaption&gt;&lt;/figcaption&gt;
+            </button>
+          </div>
+          <div id="mainBlock">
+            <button class="card-button" type="button" onclick="open_dialog('main', '#mainBlock')">
+              &lt;main&gt;&lt;/main&gt;
+            </button>
+          </div>
+          <div id="searchBlock">
+            <button class="card-button" type="button" onclick="open_dialog('search', '#searchBlock')">
+              &lt;search&gt;&lt;/search&gt;
+            </button>
+          </div>
+          <div id="divBlock">
+            <button class="card-button" type="button" onclick="open_dialog('div', '#divBlock')">
+              &lt;div&gt;&lt;/div&gt;
+            </button>
+          </div>
         </div>
-        <div id="sectionBlock">
-          <button type="button" onclick="open_dialog('section', '#sectionBlock')">
-            &lt;section&gt;&lt;/section&gt;
-          </button>
-        </div>
-        <div id="navBlock">
-          <button type="button" onclick="open_dialog('nav', '#navBlock')">
-            &lt;nav&gt;&lt;/nav&gt;
-          </button>
-        </div>
-        <div id="asideBlock">
-          <button type="button" onclick="open_dialog('aside', '#asideBlock')">
-            &lt;aside&gt;&lt;/aside&gt;
-          </button>
-        </div>
-        <div id="hBlock">
-          <button type="button" onclick="open_dialog('h', '#hBlock')">
-            Заголовки &lt;h&gt;&lt;/h&gt;
-          </button>
-        </div>
-        <div id="hgroupBlock">
-          <button type="button" onclick="open_dialog('hgroup', '#hgroupBlock')">
-            &lt;hgroup&gt;&lt;/hgroup&gt;
-          </button>
-        </div>
-        <div id="headerBlock">
-          <button type="button" onclick="open_dialog('header', '#headerBlock')">
-            &lt;header&gt;&lt;/header&gt;
-          </button>
-        </div>
-        <div id="footerBlock">
-          <button type="button" onclick="open_dialog('footer', '#footerBlock')">
-            &lt;footer&gt;&lt;/footer&gt;
-          </button>
-        </div>
-        <div id="addressBlock">
-          <button type="button" onclick="open_dialog('address', '#addressBlock')">
-            &lt;address&gt;&lt;/address&gt;
-          </button>
+        <div class="preview-card"><h2>Группировка<br>контента</h2></div>
+      </div>
+      <div class="content-wrapper-left">
+        <div class="preview-card"><h2>Семантика<br>уровня<br>текста</h2></div>
+        <div class="wrapper" id="text-level-semantics">
+          <div id="aBlock">
+            <button class="card-button" type="button" onclick="open_dialog('a', '#aBlock')">
+              &lt;a&gt;&lt;/a&gt;
+            </button>
+          </div>
+          <div id="emBlock">
+            <button class="card-button" type="button" onclick="open_dialog('em', '#emBlock')">
+              &lt;em&gt;&lt;/em&gt;
+            </button>
+          </div>
+          <div id="strongBlock">
+            <button class="card-button" type="button" onclick="open_dialog('strong', '#strongBlock')">
+              &lt;strong&gt;&lt;/strong&gt;
+            </button>
+          </div>
+          <div id="smallBlock">
+            <button class="card-button" type="button" onclick="open_dialog('small', '#smallBlock')">
+              &lt;small&gt;&lt;/small&gt;
+            </button>
+          </div>
+          <div id="sBlock">
+            <button class="card-button" type="button" onclick="open_dialog('s', '#sBlock')">
+              &lt;s&gt;&lt;/s&gt;
+            </button>
+          </div>
+          <div id="citeBlock">
+            <button class="card-button" type="button" onclick="open_dialog('cite', '#citeBlock')">
+              &lt;cite&gt;&lt;/cite&gt;
+            </button>
+          </div>
+          <div id="qBlock">
+            <button class="card-button" type="button" onclick="open_dialog('q', '#qBlock')">
+              &lt;q&gt;&lt;/q&gt;
+            </button>
+          </div>
+          <div id="dfnBlock">
+            <button class="card-button" type="button" onclick="open_dialog('dfn', '#dfnBlock')">
+              &lt;dfn&gt;&lt;/dfn&gt;
+            </button>
+          </div>
+          <div id="abbrBlock">
+            <button class="card-button" type="button" onclick="open_dialog('abbr', '#abbrBlock')">
+              &lt;abbr&gt;&lt;/abbr&gt;
+            </button>
+          </div>
+          <div id="rubyBlock">
+            <button class="card-button" type="button" onclick="open_dialog('ruby', '#rubyBlock')">
+              &lt;ruby&gt;&lt;/ruby&gt;
+            </button>
+          </div>
+          <div id="rtBlock">
+            <button class="card-button" type="button" onclick="open_dialog('rt', '#rtBlock')">
+              &lt;rt&gt;&lt;/rt&gt;
+            </button>
+          </div>
+          <div id="rpBlock">
+            <button class="card-button" type="button" onclick="open_dialog('rp', '#rpBlock')">
+              &lt;rp&gt;&lt;/rp&gt;
+            </button>
+          </div>
+          <div id="dataBlock">
+            <button class="card-button" type="button" onclick="open_dialog('data', '#dataBlock')">
+              &lt;data&gt;&lt;/data&gt;
+            </button>
+          </div>
+          <div id="timeBlock">
+            <button class="card-button" type="button" onclick="open_dialog('time', '#timeBlock')">
+              &lt;time&gt;&lt;/time&gt;
+            </button>
+          </div>
+          <div id="codeBlock">
+            <button class="card-button" type="button" onclick="open_dialog('code', '#codeBlock')">
+              &lt;code&gt;&lt;/code&gt;
+            </button>
+          </div>
+          <div id="varBlock">
+            <button class="card-button" type="button" onclick="open_dialog('var', '#varBlock')">
+              &lt;var&gt;&lt;/var&gt;
+            </button>
+          </div>
+          <div id="sampBlock">
+            <button class="card-button" type="button" onclick="open_dialog('samp', '#sampBlock')">
+              &lt;samp&gt;&lt;/samp&gt;
+            </button>
+          </div>
+          <div id="kbdBlock">
+            <button class="card-button" type="button" onclick="open_dialog('kbd', '#kbdBlock')">
+              &lt;kbd&gt;&lt;/kbd&gt;
+            </button>
+          </div>
+          <div id="subBlock">
+            <button class="card-button" type="button" onclick="open_dialog('sub', '#subBlock')">
+              &lt;sub&gt;&lt;/sub&gt;
+            </button>
+          </div>
+          <div id="supBlock">
+            <button class="card-button" type="button" onclick="open_dialog('sup', '#supBlock')">
+              &lt;sup&gt;&lt;/sup&gt;
+            </button>
+          </div>
+          <div id="iBlock">
+            <button class="card-button" type="button" onclick="open_dialog('i', '#iBlock')">
+              &lt;i&gt;&lt;/i&gt;
+            </button>
+          </div>
+          <div id="bBlock">
+            <button class="card-button" type="button" onclick="open_dialog('b', '#bBlock')">
+              &lt;b&gt;&lt;/b&gt;
+            </button>
+          </div>
+          <div id="uBlock">
+            <button class="card-button" type="button" onclick="open_dialog('u', '#uBlock')">
+              &lt;u&gt;&lt;/u&gt;
+            </button>
+          </div>
+          <div id="markBlock">
+            <button class="card-button" type="button" onclick="open_dialog('mark', '#markBlock')">
+              &lt;mark&gt;&lt;/mark&gt;
+            </button>
+          </div>
+          <div id="bdiBlock">
+            <button class="card-button" type="button" onclick="open_dialog('bdi', '#bdiBlock')">
+              &lt;bdi&gt;&lt;/bdi&gt;
+            </button>
+          </div>
+          <div id="bdoBlock">
+            <button class="card-button" type="button" onclick="open_dialog('bdo', '#bdoBlock')">
+              &lt;bdo&gt;&lt;/bdo&gt;
+            </button>
+          </div>
+          <div id="spanBlock">
+            <button class="card-button" type="button" onclick="open_dialog('span', '#spanBlock')">
+              &lt;span&gt;&lt;/span&gt;
+            </button>
+          </div>
+          <div id="brBlock">
+            <button class="card-button" type="button" onclick="open_dialog('br', '#brBlock')">
+              &lt;br&gt;
+            </button>
+          </div>
+          <div id="wbrBlock">
+            <button class="card-button" type="button" onclick="open_dialog('wbr', '#wbrBlock')">
+              &lt;wbr&gt;
+            </button>
+          </div>
         </div>
       </div>
-      <hr>
-      <h2>Группировка контента</h2>
-      <div class="wrapper" id="grouping-content">
-        <div id="pBlock">
-          <button type="button" onclick="open_dialog('p', '#pBlock')">
-            &lt;p&gt;&lt;/p&gt;
-          </button>
+      <div class="content-wrapper-right">
+        <div class="wrapper" id="edits">
+          <div id="insBlock">
+            <button class="card-button" type="button" onclick="open_dialog('ins', '#insBlock')">
+              &lt;ins&gt;&lt;/ins&gt;
+            </button>
+          </div>
+          <div id="delBlock">
+            <button class="card-button" type="button" onclick="open_dialog('del', '#delBlock')">
+              &lt;del&gt;&lt;/del&gt;
+            </button>
+          </div>
+          <div id="pictureBlock">
+            <button class="card-button" type="button" onclick="open_dialog('picture', '#pictureBlock')">
+              &lt;picture&gt;&lt;/picture&gt;
+            </button>
+          </div>
+          <div id="sourceBlock">
+            <button class="card-button" type="button" onclick="open_dialog('source', '#sourceBlock')">
+              &lt;source&gt;
+            </button>
+          </div>
+          <div id="imgBlock">
+            <button class="card-button" type="button" onclick="open_dialog('img', '#imgBlock')">
+              &lt;img&gt;
+            </button>
+          </div>
+          <div id="iframeBlock">
+            <button class="card-button" type="button" onclick="open_dialog('iframe', '#iframeBlock')">
+              &lt;iframe&gt;&lt;/iframe&gt;
+            </button>
+          </div>
+          <div id="embedBlock">
+            <button class="card-button" type="button" onclick="open_dialog('embed', '#embedBlock')">
+              &lt;embed&gt;&lt;/embed&gt;
+            </button>
+          </div>
+          <div id="objectBlock">
+            <button class="card-button" type="button" onclick="open_dialog('object', '#objectBlock')">
+              &lt;object&gt;&lt;/object&gt;
+            </button>
+          </div>
+          <div id="videoBlock">
+            <button class="card-button" type="button" onclick="open_dialog('video', '#videoBlock')">
+              &lt;video&gt;
+            </button>
+          </div>
+          <div id="audioBlock">
+            <button class="card-button" type="button" onclick="open_dialog('audio', '#audioBlock')">
+              &lt;audio&gt;
+            </button>
+          </div>
+          <div id="trackBlock">
+            <button class="card-button" type="button" onclick="open_dialog('track', '#trackBlock')">
+              &lt;track&gt;&lt;/track&gt;
+            </button>
+          </div>
+          <div id="mapBlock">
+            <button class="card-button" type="button" onclick="open_dialog('map', '#mapBlock')">
+              &lt;map&gt;&lt;/map&gt;
+            </button>
+          </div>
+          <div id="areaBlock">
+            <button class="card-button" type="button" onclick="open_dialog('area', '#areaBlock')">
+              &lt;area&gt;&lt;/area&gt;
+            </button>
+          </div>
         </div>
-        <div id="hrBlock">
-          <button type="button" onclick="open_dialog('hr', '#hrBlock')">
-            &lt;hr&gt;
-          </button>
-        </div>
-        <div id="preBlock">
-          <button type="button" onclick="open_dialog('pre', '#preBlock')">
-            &lt;pre&gt;&lt;/pre&gt;
-          </button>
-        </div>
-        <div id="blockquoteBlock">
-          <button type="button" onclick="open_dialog('blockquote', '#blockquoteBlock')">
-            &lt;blockquote&gt;&lt;/blockquote&gt;
-          </button>
-        </div>
-        <div id="olBlock">
-          <button type="button" onclick="open_dialog('ol', '#olBlock')">
-            &lt;ol&gt;&lt;/ol&gt;
-          </button>
-        </div>
-        <div id="ulBlock">
-          <button type="button" onclick="open_dialog('ul', '#ulBlock')">
-            &lt;ul&gt;&lt;/ul&gt;
-          </button>
-        </div>
-        <div id="menuBlock">
-          <button type="button" onclick="open_dialog('menu', '#menuBlock')">
-            &lt;menu&gt;&lt;/menu&gt;
-          </button>
-        </div>
-        <div id="liBlock">
-          <button type="button" onclick="open_dialog('li', '#liBlock')">
-            &lt;li&gt;&lt;/li&gt;
-          </button>
-        </div>
-        <div id="dlBlock">
-          <button type="button" onclick="open_dialog('dl', '#dlBlock')">
-            &lt;dl&gt;&lt;/dl&gt;
-          </button>
-        </div>
-        <div id="dtBlock">
-          <button type="button" onclick="open_dialog('dt', '#dtBlock')">
-            &lt;dt&gt;&lt;/dt&gt;
-          </button>
-        </div>
-        <div id="ddBlock">
-          <button type="button" onclick="open_dialog('dd', '#ddBlock')">
-            &lt;dd&gt;&lt;/dd&gt;
-          </button>
-        </div>
-        <div id="figureBlock">
-          <button type="button" onclick="open_dialog('figure', '#figureBlock')">
-            &lt;figure&gt;&lt;/figure&gt;
-          </button>
-        </div>
-        <div id="figcaptionBlock">
-          <button type="button" onclick="open_dialog('figcaption', '#figcaptionBlock')">
-            &lt;figcaption&gt;&lt;/figcaption&gt;
-          </button>
-        </div>
-        <div id="mainBlock">
-          <button type="button" onclick="open_dialog('main', '#mainBlock')">
-            &lt;main&gt;&lt;/main&gt;
-          </button>
-        </div>
-        <div id="searchBlock">
-          <button type="button" onclick="open_dialog('search', '#searchBlock')">
-            &lt;search&gt;&lt;/search&gt;
-          </button>
-        </div>
-        <div id="divBlock">
-          <button type="button" onclick="open_dialog('div', '#divBlock')">
-            &lt;div&gt;&lt;/div&gt;
-          </button>
+        <div class="preview-card"><h2>Правки</h2></div>
+      </div>
+      <div class="content-wrapper-left">
+        <div class="preview-card"><h2>Табличные<br>данные</h2></div>
+        <div class="wrapper" id="tabular-data">
+          <div id="tableBlock">
+            <button class="card-button" type="button" onclick="open_dialog('table', '#tableBlock')">
+              &lt;table&gt;&lt;/table&gt;
+            </button>
+          </div>
+          <div id="captionBlock">
+            <button class="card-button" type="button" onclick="open_dialog('caption', '#captionBlock')">
+              &lt;caption&gt;&lt;/caption&gt;
+            </button>
+          </div>
+          <div id="colgroupBlock">
+            <button class="card-button" type="button" onclick="open_dialog('colgroup', '#colgroupBlock')">
+              &lt;colgroup&gt;&lt;/colgroup&gt;
+            </button>
+          </div>
+          <div id="colBlock">
+            <button class="card-button" type="button" onclick="open_dialog('col', '#colBlock')">
+              &lt;col&gt;&lt;/col&gt;
+            </button>
+          </div>
+          <div id="tbodyBlock">
+            <button class="card-button" type="button" onclick="open_dialog('tbody', '#tbodyBlock')">
+              &lt;tbody&gt;&lt;/tbody&gt;
+            </button>
+          </div>
+          <div id="theadBlock">
+            <button class="card-button" type="button" onclick="open_dialog('thead', '#theadBlock')">
+              &lt;thead&gt;&lt;/thead&gt;
+            </button>
+          </div>
+          <div id="tfootBlock">
+            <button class="card-button" type="button" onclick="open_dialog('tfoot', '#tfootBlock')">
+              &lt;tfoot&gt;&lt;/tfoot&gt;
+            </button>
+          </div>
+          <div id="trBlock">
+            <button class="card-button" type="button" onclick="open_dialog('tr', '#trBlock')">
+              &lt;tr&gt;&lt;/tr&gt;
+            </button>
+          </div>
+          <div id="tdBlock">
+            <button class="card-button" type="button" onclick="open_dialog('td', '#tdBlock')">
+              &lt;td&gt;&lt;/td&gt;
+            </button>
+          </div>
+          <div id="thBlock">
+            <button class="card-button" type="button" onclick="open_dialog('th', '#thBlock')">
+              &lt;em&gt;&lt;/em&gt;
+            </button>
+          </div>
         </div>
       </div>
-      <hr>
-      <h2>Семантика уровня текста</h2>
-      <div class="wrapper" id="text-level-semantics">
-        <div id="aBlock">
-          <button type="button" onclick="open_dialog('a', '#aBlock')">
-            &lt;a&gt;&lt;/a&gt;
-          </button>
+      <div class="content-wrapper-right">
+        <div class="wrapper" id="forms">
+          <div id="formBlock">
+            <button class="card-button" type="button" onclick="open_dialog('form', '#formBlock')">
+              &lt;form&gt;&lt;/form&gt;
+            </button>
+          </div>
+          <div id="labelBlock">
+            <button class="card-button" type="button" onclick="open_dialog('label', '#labelBlock')">
+              &lt;label&gt;&lt;/label&gt;
+            </button>
+          </div>
+          <div id="inputTextBlock">
+            <button class="card-button" type="button" onclick="open_dialog('inputText', '#inputTextBlock')">
+              &lt;input type="text"&gt;
+            </button>
+          </div>
+          <div id="inputTelBlock">
+            <button class="card-button" type="button" onclick="open_dialog('inputTel', '#inputTelBlock')">
+              &lt;input type="tel"&gt;
+            </button>
+          </div>
+          <div id="inputEmailBlock">
+            <button class="card-button" type="button" onclick="open_dialog('inputEmail', '#inputEmailBlock')">
+              &lt;input type="email"&gt;
+            </button>
+          </div>
+          <div id="inputPasswordBlock">
+            <button class="card-button" type="button" onclick="open_dialog('inputPassword', '#inputPasswordBlock')">
+              &lt;input type="password"&gt;
+            </button>
+          </div>
+          <div id="inputDateBlock">
+            <button class="card-button" type="button" onclick="open_dialog('inputDate', '#inputDateBlock')">
+              &lt;input type="date"&gt;
+            </button>
+          </div>
+          <div id="inputMonthBlock">
+            <button class="card-button" type="button" onclick="open_dialog('inputMonth', '#inputMonthBlock')">
+              &lt;input type="month"&gt;
+            </button>
+          </div>
+          <div id="inputWeekBlock">
+            <button class="card-button" type="button" onclick="open_dialog('inputWeek', '#inputWeekBlock')">
+              &lt;input type="week"&gt;
+            </button>
+          </div>
+          <div id="inputTimeBlock">
+            <button class="card-button" type="button" onclick="open_dialog('inputTime', '#inputTimeBlock')">
+              &lt;input type="time"&gt;
+            </button>
+          </div>
+          <div id="inputDateTime-LocalBlock">
+            <button class="card-button" type="button" onclick="open_dialog('inputDateTime-Local', '#inputDateTime-LocalBlock')">
+              &lt;input type="datetime-local"&gt;
+            </button>
+          </div>
+          <div id="inputNumberBlock">
+            <button class="card-button" type="button" onclick="open_dialog('inputNumber', '#inputNumberBlock')">
+              &lt;input type="number"&gt;
+            </button>
+          </div>
+          <div id="inputRangeBlock">
+            <button class="card-button" type="button" onclick="open_dialog('inputRange', '#inputRangeBlock')">
+              &lt;input type="range"&gt;
+            </button>
+          </div>
+          <div id="inputColorBlock">
+            <button class="card-button" type="button" onclick="open_dialog('inputColor', '#inputColorBlock')">
+              &lt;input type="color"&gt;
+            </button>
+          </div>
+          <div id="inputRadioBlock">
+            <button class="card-button" type="button" onclick="open_dialog('inputRadio', '#inputRadioBlock')">
+              &lt;input type="radio"&gt;
+            </button>
+          </div>
+          <div id="inputCheckBoxBlock">
+            <button class="card-button" type="button" onclick="open_dialog('inputCheckBox', '#inputCheckBoxBlock')">
+              &lt;input type="checkbox"&gt;
+            </button>
+          </div>
+          <div id="inputFileBlock">
+            <button class="card-button" type="button" onclick="open_dialog('inputFile', '#inputFileBlock')">
+              &lt;input type="file"&gt;
+            </button>
+          </div>
+          <div id="inputSubmitBlock">
+            <button class="card-button" type="button" onclick="open_dialog('inputSubmit', '#inputSubmitBlock')">
+              &lt;input type="Submit"&gt;
+            </button>
+          </div>
+          <div id="inputImageBlock">
+            <button class="card-button" type="button" onclick="open_dialog('inputImage', '#inputImageBlock')">
+              &lt;input type="image"&gt;
+            </button>
+          </div>
+          <div id="inputResetBlock">
+            <button class="card-button" type="button" onclick="open_dialog('inputReset', '#inputResetBlock')">
+              &lt;input type="reset"&gt;
+            </button>
+          </div>
+          <div id="inputButtonBlock">
+            <button class="card-button" type="button" onclick="open_dialog('inputButton', '#inputButtonBlock')">
+              &lt;input type="button"&gt;
+            </button>
+          </div>
+          <div id="buttonBlock">
+            <button class="card-button" type="button" onclick="open_dialog('button', '#buttonBlock')">
+              &lt;button&gt;&lt;/button&gt;
+            </button>
+          </div>
+          <div id="selectBlock">
+            <button class="card-button" type="button" onclick="open_dialog('select', '#selectBlock')">
+              &lt;select&gt;&lt;/select&gt;
+            </button>
+          </div>
+          <div id="datalistBlock">
+            <button class="card-button" type="button" onclick="open_dialog('datalist', '#datalistBlock')">
+              &lt;datalist&gt;&lt;/datalist&gt;
+            </button>
+          </div>
+          <div id="optgroupBlock">
+            <button class="card-button" type="button" onclick="open_dialog('optgroup', '#optgroupBlock')">
+              &lt;optgroup&gt;&lt;/optgroup&gt;
+            </button>
+          </div>
+          <div id="optionBlock">
+            <button class="card-button" type="button" onclick="open_dialog('option', '#optionBlock')">
+              &lt;option&gt;&lt;/option&gt;
+            </button>
+          </div>
+          <div id="textareaBlock">
+            <button class="card-button" type="button" onclick="open_dialog('textarea', '#textareaBlock')">
+              &lt;textarea&gt;&lt;/textarea&gt;
+            </button>
+          </div>
+          <div id="outputBlock">
+            <button class="card-button" type="button" onclick="open_dialog('output', '#outputBlock')">
+              &lt;output&gt;&lt;/output&gt;
+            </button>
+          </div>
+          <div id="progressBlock">
+            <button class="card-button" type="button" onclick="open_dialog('progress', '#progressBlock')">
+              &lt;progress&gt;&lt;/progress&gt;
+            </button>
+          </div>  
+          <div id="meterBlock">
+            <button class="card-button" type="button" onclick="open_dialog('meter', '#meterBlock')">
+              &lt;meter&gt;&lt;/meter&gt;
+            </button>
+          </div>
+          <div id="fieldsetBlock">
+            <button class="card-button" type="button" onclick="open_dialog('fieldset', '#fieldsetBlock')">
+              &lt;fieldset&gt;&lt;/fieldset&gt;
+            </button>
+          </div>
+          <div id="legendBlock">
+            <button class="card-button" type="button" onclick="open_dialog('legend', '#legendBlock')">
+              &lt;legend&gt;&lt;/legend&gt;
+            </button>
+          </div>
         </div>
-        <div id="emBlock">
-          <button type="button" onclick="open_dialog('em', '#emBlock')">
-            &lt;em&gt;&lt;/em&gt;
-          </button>
-        </div>
-        <div id="strongBlock">
-          <button type="button" onclick="open_dialog('strong', '#strongBlock')">
-            &lt;strong&gt;&lt;/strong&gt;
-          </button>
-        </div>
-        <div id="smallBlock">
-          <button type="button" onclick="open_dialog('small', '#smallBlock')">
-            &lt;small&gt;&lt;/small&gt;
-          </button>
-        </div>
-        <div id="sBlock">
-          <button type="button" onclick="open_dialog('s', '#sBlock')">
-            &lt;s&gt;&lt;/s&gt;
-          </button>
-        </div>
-        <div id="citeBlock">
-          <button type="button" onclick="open_dialog('cite', '#citeBlock')">
-            &lt;cite&gt;&lt;/cite&gt;
-          </button>
-        </div>
-        <div id="qBlock">
-          <button type="button" onclick="open_dialog('q', '#qBlock')">
-            &lt;q&gt;&lt;/q&gt;
-          </button>
-        </div>
-        <div id="dfnBlock">
-          <button type="button" onclick="open_dialog('dfn', '#dfnBlock')">
-            &lt;dfn&gt;&lt;/dfn&gt;
-          </button>
-        </div>
-        <div id="abbrBlock">
-          <button type="button" onclick="open_dialog('abbr', '#abbrBlock')">
-            &lt;abbr&gt;&lt;/abbr&gt;
-          </button>
-        </div>
-        <div id="rubyBlock">
-          <button type="button" onclick="open_dialog('ruby', '#rubyBlock')">
-            &lt;ruby&gt;&lt;/ruby&gt;
-          </button>
-        </div>
-        <div id="rtBlock">
-          <button type="button" onclick="open_dialog('rt', '#rtBlock')">
-            &lt;rt&gt;&lt;/rt&gt;
-          </button>
-        </div>
-        <div id="rpBlock">
-          <button type="button" onclick="open_dialog('rp', '#rpBlock')">
-            &lt;rp&gt;&lt;/rp&gt;
-          </button>
-        </div>
-        <div id="dataBlock">
-          <button type="button" onclick="open_dialog('data', '#dataBlock')">
-            &lt;data&gt;&lt;/data&gt;
-          </button>
-        </div>
-        <div id="timeBlock">
-          <button type="button" onclick="open_dialog('time', '#timeBlock')">
-            &lt;time&gt;&lt;/time&gt;
-          </button>
-        </div>
-        <div id="codeBlock">
-          <button type="button" onclick="open_dialog('code', '#codeBlock')">
-            &lt;code&gt;&lt;/code&gt;
-          </button>
-        </div>
-        <div id="varBlock">
-          <button type="button" onclick="open_dialog('var', '#varBlock')">
-            &lt;var&gt;&lt;/var&gt;
-          </button>
-        </div>
-        <div id="sampBlock">
-          <button type="button" onclick="open_dialog('samp', '#sampBlock')">
-            &lt;samp&gt;&lt;/samp&gt;
-          </button>
-        </div>
-        <div id="kbdBlock">
-          <button type="button" onclick="open_dialog('kbd', '#kbdBlock')">
-            &lt;kbd&gt;&lt;/kbd&gt;
-          </button>
-        </div>
-        <div id="subBlock">
-          <button type="button" onclick="open_dialog('sub', '#subBlock')">
-            &lt;sub&gt;&lt;/sub&gt;
-          </button>
-        </div>
-        <div id="supBlock">
-          <button type="button" onclick="open_dialog('sup', '#supBlock')">
-            &lt;sup&gt;&lt;/sup&gt;
-          </button>
-        </div>
-        <div id="iBlock">
-          <button type="button" onclick="open_dialog('i', '#iBlock')">
-            &lt;i&gt;&lt;/i&gt;
-          </button>
-        </div>
-        <div id="bBlock">
-          <button type="button" onclick="open_dialog('b', '#bBlock')">
-            &lt;b&gt;&lt;/b&gt;
-          </button>
-        </div>
-        <div id="uBlock">
-          <button type="button" onclick="open_dialog('u', '#uBlock')">
-            &lt;u&gt;&lt;/u&gt;
-          </button>
-        </div>
-        <div id="markBlock">
-          <button type="button" onclick="open_dialog('mark', '#markBlock')">
-            &lt;mark&gt;&lt;/mark&gt;
-          </button>
-        </div>
-        <div id="bdiBlock">
-          <button type="button" onclick="open_dialog('bdi', '#bdiBlock')">
-            &lt;bdi&gt;&lt;/bdi&gt;
-          </button>
-        </div>
-        <div id="bdoBlock">
-          <button type="button" onclick="open_dialog('bdo', '#bdoBlock')">
-            &lt;bdo&gt;&lt;/bdo&gt;
-          </button>
-        </div>
-        <div id="spanBlock">
-          <button type="button" onclick="open_dialog('span', '#spanBlock')">
-            &lt;span&gt;&lt;/span&gt;
-          </button>
-        </div>
-        <div id="brBlock">
-          <button type="button" onclick="open_dialog('br', '#brBlock')">
-            &lt;br&gt;
-          </button>
-        </div>
-        <div id="wbrBlock">
-          <button type="button" onclick="open_dialog('wbr', '#wbrBlock')">
-            &lt;wbr&gt;
-          </button>
+        <div class="preview-card"><h2>Формы</h2></div>
+      </div>
+      <div class="content-wrapper-left">
+        <div class="preview-card"><h2>Интера<wbr>ктивные<br>элементы</h2></div>
+        <div class="wrapper" id="interactive-elements">
+          <div id="detailsBlock">
+            <button class="card-button" type="button" onclick="open_dialog('details', '#detailsBlock')">
+              &lt;details&gt;&lt;/details&gt;
+            </button>
+          </div>
+          <div id="summaryBlock">
+            <button class="card-button" type="button" onclick="open_dialog('summary', '#summaryBlock')">
+              &lt;summary&gt;&lt;/summary&gt;
+            </button>
+          </div>
+          <div id="dialogBlock">
+            <button class="card-button" type="button" onclick="open_dialog('dialog', '#dialogBlock')">
+              &lt;dialog&gt;&lt;/dialog&gt;
+            </button>
+          </div>
         </div>
       </div>
-      <hr>
-      <h2>Правки</h2>
-      <div class="wrapper" id="edits">
-        <div id="insBlock">
-          <button type="button" onclick="open_dialog('ins', '#insBlock')">
-            &lt;ins&gt;&lt;/ins&gt;
-          </button>
+      <div class="content-wrapper-right">
+        <div class="wrapper" id="scripting">
+          <div id="scriptBlock">
+            <button class="card-button" type="button" onclick="open_dialog('script', '#ScriptBlock')">
+              &lt;script&gt;&lt;/script&gt;
+            </button>
+          </div>
+          <div id="noscriptBlock">
+            <button class="card-button" type="button" onclick="open_dialog('noscript', '#noscriptBlock')">
+              &lt;noscript&gt;&lt;/noscript&gt;
+            </button>
+          </div>
+          <div id="templateBlock">
+            <button class="card-button" type="button" onclick="open_dialog('template', '#templateBlock')">
+              &lt;template&gt;&lt;/template&gt;
+            </button>
+          </div>
+          <div id="slotBlock">
+            <button class="card-button" type="button" onclick="open_dialog('slot', '#slotBlock')">
+              &lt;slot&gt;&lt;/slot&gt;
+            </button>
+          </div>
+          <div id="canvasBlock">
+            <button class="card-button" type="button" onclick="open_dialog('canvas', '#canvasBlock')">
+              &lt;canvas&gt;&lt;/canvas&gt;
+            </button>
+          </div>
         </div>
-        <div id="delBlock">
-          <button type="button" onclick="open_dialog('del', '#delBlock')">
-            &lt;del&gt;&lt;/del&gt;
-          </button>
-        </div>
-        <div id="pictureBlock">
-          <button type="button" onclick="open_dialog('picture', '#pictureBlock')">
-            &lt;picture&gt;&lt;/picture&gt;
-          </button>
-        </div>
-        <div id="sourceBlock">
-          <button type="button" onclick="open_dialog('source', '#sourceBlock')">
-            &lt;source&gt;
-          </button>
-        </div>
-        <div id="imgBlock">
-          <button type="button" onclick="open_dialog('img', '#imgBlock')">
-            &lt;img&gt;
-          </button>
-        </div>
-        <div id="iframeBlock">
-          <button type="button" onclick="open_dialog('iframe', '#iframeBlock')">
-            &lt;iframe&gt;&lt;/iframe&gt;
-          </button>
-        </div>
-        <div id="embedBlock">
-          <button type="button" onclick="open_dialog('embed', '#embedBlock')">
-            &lt;embed&gt;&lt;/embed&gt;
-          </button>
-        </div>
-        <div id="objectBlock">
-          <button type="button" onclick="open_dialog('object', '#objectBlock')">
-            &lt;object&gt;&lt;/object&gt;
-          </button>
-        </div>
-        <div id="videoBlock">
-          <button type="button" onclick="open_dialog('video', '#videoBlock')">
-            &lt;video&gt;
-          </button>
-        </div>
-        <div id="audioBlock">
-          <button type="button" onclick="open_dialog('audio', '#audioBlock')">
-            &lt;audio&gt;
-          </button>
-        </div>
-        <div id="trackBlock">
-          <button type="button" onclick="open_dialog('track', '#trackBlock')">
-            &lt;track&gt;&lt;/track&gt;
-          </button>
-        </div>
-        <div id="mapBlock">
-          <button type="button" onclick="open_dialog('map', '#mapBlock')">
-            &lt;map&gt;&lt;/map&gt;
-          </button>
-        </div>
-        <div id="areaBlock">
-          <button type="button" onclick="open_dialog('area', '#areaBlock')">
-            &lt;area&gt;&lt;/area&gt;
-          </button>
-        </div>
-      </div>
-      <hr>
-      <h2>Табличные данные</h2>
-      <div class="wrapper" id="tabular-data">
-        <div id="tableBlock">
-          <button type="button" onclick="open_dialog('table', '#tableBlock')">
-            &lt;table&gt;&lt;/table&gt;
-          </button>
-        </div>
-        <div id="captionBlock">
-          <button type="button" onclick="open_dialog('caption', '#captionBlock')">
-            &lt;caption&gt;&lt;/caption&gt;
-          </button>
-        </div>
-        <div id="colgroupBlock">
-          <button type="button" onclick="open_dialog('colgroup', '#colgroupBlock')">
-            &lt;colgroup&gt;&lt;/colgroup&gt;
-          </button>
-        </div>
-        <div id="colBlock">
-          <button type="button" onclick="open_dialog('col', '#colBlock')">
-            &lt;col&gt;&lt;/col&gt;
-          </button>
-        </div>
-        <div id="tbodyBlock">
-          <button type="button" onclick="open_dialog('tbody', '#tbodyBlock')">
-            &lt;tbody&gt;&lt;/tbody&gt;
-          </button>
-        </div>
-        <div id="theadBlock">
-          <button type="button" onclick="open_dialog('thead', '#theadBlock')">
-            &lt;thead&gt;&lt;/thead&gt;
-          </button>
-        </div>
-        <div id="tfootBlock">
-          <button type="button" onclick="open_dialog('tfoot', '#tfootBlock')">
-            &lt;tfoot&gt;&lt;/tfoot&gt;
-          </button>
-        </div>
-        <div id="trBlock">
-          <button type="button" onclick="open_dialog('tr', '#trBlock')">
-            &lt;tr&gt;&lt;/tr&gt;
-          </button>
-        </div>
-        <div id="tdBlock">
-          <button type="button" onclick="open_dialog('td', '#tdBlock')">
-            &lt;td&gt;&lt;/td&gt;
-          </button>
-        </div>
-        <div id="thBlock">
-          <button type="button" onclick="open_dialog('th', '#thBlock')">
-            &lt;em&gt;&lt;/em&gt;
-          </button>
-        </div>
-      </div>
-      <hr>
-      <h2>Формы</h2>
-      <div class="wrapper" id="forms">
-        <div id="formBlock">
-          <button type="button" onclick="open_dialog('form', '#formBlock')">
-            &lt;form&gt;&lt;/form&gt;
-          </button>
-        </div>
-        <div id="labelBlock">
-          <button type="button" onclick="open_dialog('label', '#labelBlock')">
-            &lt;label&gt;&lt;/label&gt;
-          </button>
-        </div>
-      </div>
-      <h3>Input'ы</h3>
-      <div class="wrapper" id="inputs">
-        <div id="inputTextBlock">
-          <button type="button" onclick="open_dialog('inputText', '#inputTextBlock')">
-            &lt;input type="text/tel/email"&gt;&lt;/input&gt;
-          </button>
-        </div>
-        <div id="inputDateBlock">
-          <button type="button" onclick="open_dialog('inputDate', '#inputDateBlock')">
-            &lt;input type="date/month/week/time/datetime-local"&gt;&lt;/input&gt;
-          </button>
-        </div>
-        <div id="inputNumBlock">
-          <button type="button" onclick="open_dialog('inputNum', '#inputNumBlock')">
-            &lt;input type="number/range"&gt;&lt;/input&gt;
-          </button>
-        </div>
-        <div id="inputColorBlock">
-          <button type="button" onclick="open_dialog('inputColor', '#inputColorBlock')">
-            &lt;input type="color"&gt;&lt;/input&gt;
-          </button>
-        </div>
-        <div id="inputRadioBlock">
-          <button type="button" onclick="open_dialog('inputRadio', '#inputRadioBlock')">
-            &lt;input type="radio/checkbox"&gt;&lt;/input&gt;
-          </button>
-        </div>
+        <div class="preview-card"><h2>Сценарии</h2></div>
       </div>
     </div>
   </main>
   <template id="messageTemplate">
     <dialog id="dialogWindow">
       <p id="message"></p>
-      <button class="close-button" type="button" onclick="dialogWindow.close()">
+      <button class="close-button" type="button">
         Закрыть
       </button>
     </dialog>

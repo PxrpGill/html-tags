@@ -1,0 +1,23 @@
+* {
+    color: white;
+}
+
+p {
+    margin: 20px;
+}
+
+main {
+    margin-top: 20px;
+}
+
+ul {
+    margin: 20px;
+}
+
+ol {
+    margin: 20px;
+}
+
+ul li {
+    margin-left: 10px;
+}
