@@ -1,4 +1,4 @@
-import data from './src/data.json'
+import data from './src/html_data.json'
 
 const message_sections = data;
 const templateNode = document.getElementById("messageTemplate");

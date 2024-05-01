@@ -29,6 +29,13 @@ export default {
                     scripts: [
                         { src: "to_do_list/script.js", type: "module" }
                     ]
+                },
+                {
+                    filename: "css_styles.html",
+                    template: "css_styles.html",
+                    scripts: [
+                        { src: "css_script.js", type: "module" }
+                    ]
                 }
             ]
         })
