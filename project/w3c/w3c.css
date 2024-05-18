@@ -1,3 +1,7 @@
+* {
+    color: white;
+}
+
 .header {
     background-color: var(--header-color);
     box-shadow: 0px 0px 8px black;
@@ -28,4 +32,20 @@
 .list__item a:hover {
     transition: .3s;
     color: rgb(158, 158, 158);
+}
+
+.performance {
+    margin: 20px;
+}
+
+h2, h3, h4 {
+    margin: 10px 0px 10px 0px;
+}
+
+ul, ol {
+    margin: 15px;
+}
+
+.list__description {
+    margin: 10px 0px 10px 0px;
 }
