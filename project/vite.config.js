@@ -31,10 +31,10 @@ export default {
                     ]
                 },
                 {
-                    filename: "css_styles.html",
-                    template: "css_styles.html",
+                    filename: "css_styles/css_styles.html",
+                    template: "css_styles/css_styles.html",
                     scripts: [
-                        { src: "css_script.js", type: "module" }
+                        { src: "css_styles/css_script.js", type: "module" }
                     ]
                 }
             ]
