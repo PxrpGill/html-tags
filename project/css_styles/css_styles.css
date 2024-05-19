@@ -93,6 +93,20 @@
     }
 }
 
+.message-template__dialog.close {
+    animation: fadeOut 0.3s ease-in-out;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
 .message__title {
     margin-bottom: 20px;
 }

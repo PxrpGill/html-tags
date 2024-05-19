@@ -75,6 +75,7 @@ for (let key in sections) {
         message.appendChild(exampleSection);
 
         blockClicked.appendChild(contentTemplateNode);
+        dialog.classList.remove('close');
         dialog.showModal();
     });
 }
@@ -140,6 +141,7 @@ for (let key in groupingContent) {
         message.appendChild(exampleSection);
 
         blockClicked.appendChild(contentTemplateNode);
+        dialog.classList.remove('close');
         dialog.showModal();
     });
 }
@@ -205,6 +207,7 @@ for (let key in textLevelSemantics) {
         message.appendChild(exampleSection);
 
         blockClicked.appendChild(contentTemplateNode);
+        dialog.classList.remove('close');
         dialog.showModal();
     });
 }
@@ -270,6 +273,7 @@ for (let key in edits) {
         message.appendChild(exampleSection);
 
         blockClicked.appendChild(contentTemplateNode);
+        dialog.classList.remove('close');
         dialog.showModal();
     });
 }
@@ -335,6 +339,7 @@ for (let key in tabularData) {
         message.appendChild(exampleSection);
 
         blockClicked.appendChild(contentTemplateNode);
+        dialog.classList.remove('close');
         dialog.showModal();
     });
 }
@@ -400,6 +405,7 @@ for (let key in forms) {
         message.appendChild(exampleSection);
 
         blockClicked.appendChild(contentTemplateNode);
+        dialog.classList.remove('close');
         dialog.showModal();
     });
 }
@@ -465,11 +471,15 @@ for (let key in scripting) {
         message.appendChild(exampleSection);
 
         blockClicked.appendChild(contentTemplateNode);
+        dialog.classList.remove('close');
         dialog.showModal();
     });
 }
 
 closeButton.addEventListener('click', function () {
-    dialog.close();
-    message.innerHTML = '';
+    dialog.classList.add('close');
+    setTimeout(() => {
+        dialog.close();
+        message.innerHTML = '';
+    }, 300);
 });

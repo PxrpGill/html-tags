@@ -71,11 +71,15 @@ for (let key in data) {
         message.appendChild(exampleSection);
 
         blockClicked.appendChild(contentTemplateNode);
+        dialog.classList.remove('close');
         dialog.showModal();
     });
 }
 
 closeButton.addEventListener('click', function () {
-    dialog.close();
-    message.innerHTML = '';
+    dialog.classList.add('close');
+    setTimeout(() => {
+        dialog.close();
+        message.innerHTML = '';
+    }, 300);
 });
