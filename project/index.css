@@ -8,6 +8,7 @@
     width: 80%;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .header__logo {
@@ -306,4 +307,119 @@
     transform: scale(1.05);
     background-color: red;
     color: black;
+}
+
+@media screen and (max-width: 1200px) {
+    .title__section-title {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .sections {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .sections__title {
+        width: 100%;
+        padding: 20px 0px 20px 0px;
+    }
+
+    .grouping-content {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+
+    .grouping-content__title {
+        width: 100%;
+        padding: 20px 0px 20px 0px;
+    }
+
+    .text-level-semantics {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .text-level-semantics__title {
+        width: 100%;
+        padding: 20px 0px 20px 0px;
+    }
+
+    .edits {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+
+    .edits__title {
+        width: 100%;
+        padding: 20px 0px 20px 0px;
+    }
+
+    .tabular-data {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .tabular-data__title {
+        width: 100%;
+        padding: 20px 0px 20px 0px;
+    }
+
+    .forms {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+
+    .forms__title {
+        width: 100%;
+        padding: 20px 0px 20px 0px;
+    }
+
+    .scripting {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .scripting__title {
+        width: 100%;
+        padding: 20px 0px 20px 0px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sections__content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grouping-content__content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .edits__content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .text-level-semantics__content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .tabular-data__content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .forms__content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .scripting__content {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
