@@ -1,4 +1,4 @@
-import { sections, groupingContent, textLevelSemantics, edits, tabularData, forms, scripting } from "./src/html_data.json"
+import data from "./src/html_data.json"
 
 const sectionsContent = document.querySelector(".sections__content");
 const groupingContentContent = document.querySelector(".grouping-content__content");
@@ -15,465 +15,96 @@ const message = contentTemplateNode.querySelector(".dialog__message");
 const closeButton = contentTemplateNode.querySelector(".dialog__close-button");
 
 
-for (let key in sections) {
-    const article = document.createElement("article");
-    article.className = "content__item";
-    article.id = key;
-
-    const title = document.createElement("h3");
-    title.className = "item__title--visual-hiden";
-    title.textContent = key;
-
-    const button = document.createElement("button");
-    button.type = "button";
-    button.textContent = key;
-    button.className = "item__open-dialog-button";
-
-    article.appendChild(title);
-    article.appendChild(button);
-    sectionsContent.appendChild(article);
-
-    button.addEventListener('click', function () {
-        const buttonKey = button.textContent;
-        const blockClicked = document.querySelector(`#${buttonKey}`);
-
-        const titleSection = document.createElement("section");
-        titleSection.className = "message__title";
-
-        const contentSection = document.createElement("section");
-        contentSection.className = "message__content";
-
-        const exampleSection = document.createElement("section");
-        exampleSection.className = "message__example";
+for (let nameDataSection in data) {
+    for (let keyItem in data[nameDataSection]) {
+        const article = document.createElement("article");
+        article.className = "content__item";
+        article.id = keyItem;
 
         const title = document.createElement("h3");
-        title.className = "title__inner";
-        title.textContent = sections[buttonKey]['title'];
-
-        const contentTitle = document.createElement("h3");
-        contentTitle.className = "content__title";
-        contentTitle.textContent = "О теге:";
-        const content = document.createElement("div");
-        content.className = "content__inner";
-        content.innerHTML = sections[buttonKey]['content'];
-
-        const exampleTitle = document.createElement("h3");
-        exampleTitle.className = "example__title";
-        exampleTitle.textContent = "Пример:"
-        const exampleContent = document.createElement("div");
-        exampleContent.className = "example__inner";
-        exampleContent.innerHTML = sections[buttonKey]["example"];
-
-        titleSection.appendChild(title);
-        contentSection.appendChild(contentTitle);
-        contentSection.appendChild(content);
-        exampleSection.appendChild(exampleTitle);
-        exampleSection.appendChild(exampleContent);
-
-        message.appendChild(titleSection);
-        message.appendChild(contentSection);
-        message.appendChild(exampleSection);
-
-        blockClicked.appendChild(contentTemplateNode);
-        dialog.classList.remove('close');
-        dialog.showModal();
-    });
-}
-
-
-for (let key in groupingContent) {
-    const article = document.createElement("article");
-    article.className = "content__item";
-    article.id = key;
-
-    const title = document.createElement("h3");
-    title.className = "item__title--visual-hiden";
-    title.textContent = key;
-
-    const button = document.createElement("button");
-    button.type = "button";
-    button.textContent = key;
-    button.className = "item__open-dialog-button";
-
-    article.appendChild(title);
-    article.appendChild(button);
-    groupingContentContent.appendChild(article);
-
-    button.addEventListener('click', function () {
-        const buttonKey = button.textContent;
-        const blockClicked = document.querySelector(`#${buttonKey}`);
-
-        const titleSection = document.createElement("section");
-        titleSection.className = "message__title";
-
-        const contentSection = document.createElement("section");
-        contentSection.className = "message__content";
-
-        const exampleSection = document.createElement("section");
-        exampleSection.className = "message__example";
-
-        const title = document.createElement("h3");
-        title.className = "title__inner";
-        title.textContent = groupingContent[buttonKey]['title'];
-
-        const contentTitle = document.createElement("h3");
-        contentTitle.className = "content__title";
-        contentTitle.textContent = "О теге:";
-        const content = document.createElement("div");
-        content.className = "content__inner";
-        content.innerHTML = groupingContent[buttonKey]['content'];
-
-        const exampleTitle = document.createElement("h3");
-        exampleTitle.className = "example__title";
-        exampleTitle.textContent = "Пример:"
-        const exampleContent = document.createElement("div");
-        exampleContent.className = "example__inner";
-        exampleContent.innerHTML = groupingContent[buttonKey]["example"];
-
-        titleSection.appendChild(title);
-        contentSection.appendChild(contentTitle);
-        contentSection.appendChild(content);
-        exampleSection.appendChild(exampleTitle);
-        exampleSection.appendChild(exampleContent);
-
-        message.appendChild(titleSection);
-        message.appendChild(contentSection);
-        message.appendChild(exampleSection);
-
-        blockClicked.appendChild(contentTemplateNode);
-        dialog.classList.remove('close');
-        dialog.showModal();
-    });
-}
-
-
-for (let key in textLevelSemantics) {
-    const article = document.createElement("article");
-    article.className = "content__item";
-    article.id = key;
-
-    const title = document.createElement("h3");
-    title.className = "item__title--visual-hiden";
-    title.textContent = key;
-
-    const button = document.createElement("button");
-    button.type = "button";
-    button.textContent = key;
-    button.className = "item__open-dialog-button";
-
-    article.appendChild(title);
-    article.appendChild(button);
-    textLevelSemanticsContent.appendChild(article);
-
-    button.addEventListener('click', function () {
-        const buttonKey = button.textContent;
-        const blockClicked = document.querySelector(`#${buttonKey}`);
-
-        const titleSection = document.createElement("section");
-        titleSection.className = "message__title";
-
-        const contentSection = document.createElement("section");
-        contentSection.className = "message__content";
-
-        const exampleSection = document.createElement("section");
-        exampleSection.className = "message__example";
-
-        const title = document.createElement("h3");
-        title.className = "title__inner";
-        title.textContent = textLevelSemantics[buttonKey]['title'];
-
-        const contentTitle = document.createElement("h3");
-        contentTitle.className = "content__title";
-        contentTitle.textContent = "О теге:";
-        const content = document.createElement("div");
-        content.className = "content__inner";
-        content.innerHTML = textLevelSemantics[buttonKey]['content'];
-
-        const exampleTitle = document.createElement("h3");
-        exampleTitle.className = "example__title";
-        exampleTitle.textContent = "Пример:"
-        const exampleContent = document.createElement("div");
-        exampleContent.className = "example__inner";
-        exampleContent.innerHTML = textLevelSemantics[buttonKey]["example"];
-
-        titleSection.appendChild(title);
-        contentSection.appendChild(contentTitle);
-        contentSection.appendChild(content);
-        exampleSection.appendChild(exampleTitle);
-        exampleSection.appendChild(exampleContent);
-
-        message.appendChild(titleSection);
-        message.appendChild(contentSection);
-        message.appendChild(exampleSection);
-
-        blockClicked.appendChild(contentTemplateNode);
-        dialog.classList.remove('close');
-        dialog.showModal();
-    });
-}
-
-
-for (let key in edits) {
-    const article = document.createElement("article");
-    article.className = "content__item";
-    article.id = key;
-
-    const title = document.createElement("h3");
-    title.className = "item__title--visual-hiden";
-    title.textContent = key;
-
-    const button = document.createElement("button");
-    button.type = "button";
-    button.textContent = key;
-    button.className = "item__open-dialog-button";
-
-    article.appendChild(title);
-    article.appendChild(button);
-    editsContent.appendChild(article);
-
-    button.addEventListener('click', function () {
-        const buttonKey = button.textContent;
-        const blockClicked = document.querySelector(`#${buttonKey}`);
-
-        const titleSection = document.createElement("section");
-        titleSection.className = "message__title";
-
-        const contentSection = document.createElement("section");
-        contentSection.className = "message__content";
-
-        const exampleSection = document.createElement("section");
-        exampleSection.className = "message__example";
-
-        const title = document.createElement("h3");
-        title.className = "title__inner";
-        title.textContent = edits[buttonKey]['title'];
-
-        const contentTitle = document.createElement("h3");
-        contentTitle.className = "content__title";
-        contentTitle.textContent = "О теге:";
-        const content = document.createElement("div");
-        content.className = "content__inner";
-        content.innerHTML = edits[buttonKey]['content'];
-
-        const exampleTitle = document.createElement("h3");
-        exampleTitle.className = "example__title";
-        exampleTitle.textContent = "Пример:"
-        const exampleContent = document.createElement("div");
-        exampleContent.className = "example__inner";
-        exampleContent.innerHTML = edits[buttonKey]["example"];
-
-        titleSection.appendChild(title);
-        contentSection.appendChild(contentTitle);
-        contentSection.appendChild(content);
-        exampleSection.appendChild(exampleTitle);
-        exampleSection.appendChild(exampleContent);
-
-        message.appendChild(titleSection);
-        message.appendChild(contentSection);
-        message.appendChild(exampleSection);
-
-        blockClicked.appendChild(contentTemplateNode);
-        dialog.classList.remove('close');
-        dialog.showModal();
-    });
-}
-
-
-for (let key in tabularData) {
-    const article = document.createElement("article");
-    article.className = "content__item";
-    article.id = key;
-
-    const title = document.createElement("h3");
-    title.className = "item__title--visual-hiden";
-    title.textContent = key;
-
-    const button = document.createElement("button");
-    button.type = "button";
-    button.textContent = key;
-    button.className = "item__open-dialog-button";
-
-    article.appendChild(title);
-    article.appendChild(button);
-    tabularDataContent.appendChild(article);
-
-    button.addEventListener('click', function () {
-        const buttonKey = button.textContent;
-        const blockClicked = document.querySelector(`#${buttonKey}`);
-
-        const titleSection = document.createElement("section");
-        titleSection.className = "message__title";
-
-        const contentSection = document.createElement("section");
-        contentSection.className = "message__content";
-
-        const exampleSection = document.createElement("section");
-        exampleSection.className = "message__example";
-
-        const title = document.createElement("h3");
-        title.className = "title__inner";
-        title.textContent = tabularData[buttonKey]['title'];
-
-        const contentTitle = document.createElement("h3");
-        contentTitle.className = "content__title";
-        contentTitle.textContent = "О теге:";
-        const content = document.createElement("div");
-        content.className = "content__inner";
-        content.innerHTML = tabularData[buttonKey]['content'];
-
-        const exampleTitle = document.createElement("h3");
-        exampleTitle.className = "example__title";
-        exampleTitle.textContent = "Пример:"
-        const exampleContent = document.createElement("div");
-        exampleContent.className = "example__inner";
-        exampleContent.innerHTML = tabularData[buttonKey]["example"];
-
-        titleSection.appendChild(title);
-        contentSection.appendChild(contentTitle);
-        contentSection.appendChild(content);
-        exampleSection.appendChild(exampleTitle);
-        exampleSection.appendChild(exampleContent);
-
-        message.appendChild(titleSection);
-        message.appendChild(contentSection);
-        message.appendChild(exampleSection);
-
-        blockClicked.appendChild(contentTemplateNode);
-        dialog.classList.remove('close');
-        dialog.showModal();
-    });
-}
-
-
-for (let key in forms) {
-    const article = document.createElement("article");
-    article.className = "content__item";
-    article.id = key;
-
-    const title = document.createElement("h3");
-    title.className = "item__title--visual-hiden";
-    title.textContent = key;
-
-    const button = document.createElement("button");
-    button.type = "button";
-    button.textContent = key;
-    button.className = "item__open-dialog-button";
-
-    article.appendChild(title);
-    article.appendChild(button);
-    formsContent.appendChild(article);
-
-    button.addEventListener('click', function () {
-        const buttonKey = button.textContent;
-        const blockClicked = document.querySelector(`#${buttonKey}`);
-
-        const titleSection = document.createElement("section");
-        titleSection.className = "message__title";
-
-        const contentSection = document.createElement("section");
-        contentSection.className = "message__content";
-
-        const exampleSection = document.createElement("section");
-        exampleSection.className = "message__example";
-
-        const title = document.createElement("h3");
-        title.className = "title__inner";
-        title.textContent = forms[buttonKey]['title'];
-
-        const contentTitle = document.createElement("h3");
-        contentTitle.className = "content__title";
-        contentTitle.textContent = "О теге:";
-        const content = document.createElement("div");
-        content.className = "content__inner";
-        content.innerHTML = forms[buttonKey]['content'];
-
-        const exampleTitle = document.createElement("h3");
-        exampleTitle.className = "example__title";
-        exampleTitle.textContent = "Пример:"
-        const exampleContent = document.createElement("div");
-        exampleContent.className = "example__inner";
-        exampleContent.innerHTML = forms[buttonKey]["example"];
-
-        titleSection.appendChild(title);
-        contentSection.appendChild(contentTitle);
-        contentSection.appendChild(content);
-        exampleSection.appendChild(exampleTitle);
-        exampleSection.appendChild(exampleContent);
-
-        message.appendChild(titleSection);
-        message.appendChild(contentSection);
-        message.appendChild(exampleSection);
-
-        blockClicked.appendChild(contentTemplateNode);
-        dialog.classList.remove('close');
-        dialog.showModal();
-    });
-}
-
-
-for (let key in scripting) {
-    const article = document.createElement("article");
-    article.className = "content__item";
-    article.id = key;
-
-    const title = document.createElement("h3");
-    title.className = "item__title--visual-hiden";
-    title.textContent = key;
-
-    const button = document.createElement("button");
-    button.type = "button";
-    button.textContent = key;
-    button.className = "item__open-dialog-button";
-
-    article.appendChild(title);
-    article.appendChild(button);
-    scriptingContent.appendChild(article);
-
-    button.addEventListener('click', function () {
-        const buttonKey = button.textContent;
-        const blockClicked = document.querySelector(`#${buttonKey}`);
-
-        const titleSection = document.createElement("section");
-        titleSection.className = "message__title";
-
-        const contentSection = document.createElement("section");
-        contentSection.className = "message__content";
-
-        const exampleSection = document.createElement("section");
-        exampleSection.className = "message__example";
-
-        const title = document.createElement("h3");
-        title.className = "title__inner";
-        title.textContent = scripting[buttonKey]['title'];
-
-        const contentTitle = document.createElement("h3");
-        contentTitle.className = "content__title";
-        contentTitle.textContent = "О теге:";
-        const content = document.createElement("div");
-        content.className = "content__inner";
-        content.innerHTML = scripting[buttonKey]['content'];
-
-        const exampleTitle = document.createElement("h3");
-        exampleTitle.className = "example__title";
-        exampleTitle.textContent = "Пример:"
-        const exampleContent = document.createElement("div");
-        exampleContent.className = "example__inner";
-        exampleContent.innerHTML = scripting[buttonKey]["example"];
-
-        titleSection.appendChild(title);
-        contentSection.appendChild(contentTitle);
-        contentSection.appendChild(content);
-        exampleSection.appendChild(exampleTitle);
-        exampleSection.appendChild(exampleContent);
-
-        message.appendChild(titleSection);
-        message.appendChild(contentSection);
-        message.appendChild(exampleSection);
-
-        blockClicked.appendChild(contentTemplateNode);
-        dialog.classList.remove('close');
-        dialog.showModal();
-    });
+        title.className = "item__title--visual-hiden";
+        title.textContent = keyItem;
+
+        const button = document.createElement("button");
+        button.type = "button";
+        button.textContent = keyItem;
+        button.className = "item__open-dialog-button";
+
+        article.appendChild(title);
+        article.appendChild(button);
+
+        switch (nameDataSection) {
+            case "sections":
+                sectionsContent.appendChild(article);
+                break;
+            case "groupingContent":
+                groupingContentContent.appendChild(article);
+                break;
+            case "textLevelSemantics":
+                textLevelSemanticsContent.appendChild(article);
+                break;
+            case "edits":
+                editsContent.appendChild(article);
+                break;
+            case "tabularData":
+                tabularDataContent.appendChild(article);
+                break;
+            case "forms":
+                formsContent.appendChild(article);
+                break;
+            case "scripting":
+                scriptingContent.appendChild(article);
+                break;
+            default:
+                console.log("Произошла ошибка: такой секции не существует");
+        }
+
+        button.addEventListener('click', function () {
+            const buttonKey = button.textContent;
+            const blockClicked = document.querySelector(`#${buttonKey}`);
+
+            const titleSection = document.createElement("section");
+            titleSection.className = "message__title";
+
+            const contentSection = document.createElement("section");
+            contentSection.className = "message__content";
+
+            const exampleSection = document.createElement("section");
+            exampleSection.className = "message__example";
+
+            const title = document.createElement("h3");
+            title.className = "title__inner";
+            title.textContent = data[nameDataSection][keyItem]['title'];
+
+            const contentTitle = document.createElement("h3");
+            contentTitle.className = "content__title";
+            contentTitle.textContent = "О теге:";
+            const content = document.createElement("div");
+            content.className = "content__inner";
+            content.innerHTML = data[nameDataSection][keyItem]['content'];
+
+            const exampleTitle = document.createElement("h3");
+            exampleTitle.className = "example__title";
+            exampleTitle.textContent = "Пример:"
+            const exampleContent = document.createElement("div");
+            exampleContent.className = "example__inner";
+            exampleContent.innerHTML = data[nameDataSection][keyItem]["example"];
+
+            titleSection.appendChild(title);
+            contentSection.appendChild(contentTitle);
+            contentSection.appendChild(content);
+            exampleSection.appendChild(exampleTitle);
+            exampleSection.appendChild(exampleContent);
+
+            message.appendChild(titleSection);
+            message.appendChild(contentSection);
+            message.appendChild(exampleSection);
+
+            blockClicked.appendChild(contentTemplateNode);
+            dialog.classList.remove('close');
+            dialog.showModal();
+        });
+    }
 }
 
 closeButton.addEventListener('click', function () {
