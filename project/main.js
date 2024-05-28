@@ -1,116 +1,144 @@
-import data from "./src/html_data.json"
+import data from './src/html_data.json';
 
-const sectionsContent = document.querySelector(".sections__content");
-const groupingContentContent = document.querySelector(".grouping-content__content");
-const textLevelSemanticsContent = document.querySelector(".text-level-semantics__content");
-const editsContent = document.querySelector(".edits__content");
-const tabularDataContent = document.querySelector(".tabular-data__content");
-const formsContent = document.querySelector(".forms__content");
-const scriptingContent = document.querySelector(".scripting__content");
-
-const templateNode = document.querySelector(".message-template");
+const templateNode = document.querySelector('.message-template');
 const contentTemplateNode = templateNode.content.cloneNode(true);
-const dialog = contentTemplateNode.querySelector(".message-template__dialog");
-const message = contentTemplateNode.querySelector(".dialog__message");
-const closeButton = contentTemplateNode.querySelector(".dialog__close-button");
+const dialog = contentTemplateNode.querySelector('.message-template__dialog');
+const message = contentTemplateNode.querySelector('.dialog__message');
+const closeButton = contentTemplateNode.querySelector('.dialog__close-button');
 
+const sectionContent = document.querySelector('.sections__body');
+const groupingContentContent = document.querySelector('.grouping-content__body');
+const textLevelSemanticsContent = document.querySelector('.text-level-semantics__body');
+const editsContent = document.querySelector('.edits__body');
+const tabularDataContent = document.querySelector('.tabular-data__body');
+const formsContent = document.querySelector('.forms__body');
+const scriptingContent = document.querySelector('.scripting__body');
 
-for (let nameDataSection in data) {
-    for (let keyItem in data[nameDataSection]) {
-        const article = document.createElement("article");
-        article.className = "content__item";
-        article.id = keyItem;
+const openSectionButton = document.querySelectorAll('.head__button-show-section');
 
-        const title = document.createElement("h3");
-        title.className = "item__title--visual-hiden";
-        title.textContent = keyItem;
+let state = {
+    sectionContentIsClose: true,
+    groupingContentContentIsClose: true,
+    textLevelSemanticsContentIsClose: true,
+    editsContentIsClose: true,
+    tabularDataContentIsClose: true,
+    formsContentIsClose: true,
+    scriptingContentIsClose: true
+};
 
-        const button = document.createElement("button");
-        button.type = "button";
-        button.textContent = keyItem;
-        button.className = "item__open-dialog-button";
-
-        article.appendChild(title);
-        article.appendChild(button);
-
-        switch (nameDataSection) {
-            case "sections":
-                sectionsContent.appendChild(article);
-                break;
-            case "groupingContent":
-                groupingContentContent.appendChild(article);
-                break;
-            case "textLevelSemantics":
-                textLevelSemanticsContent.appendChild(article);
-                break;
-            case "edits":
-                editsContent.appendChild(article);
-                break;
-            case "tabularData":
-                tabularDataContent.appendChild(article);
-                break;
-            case "forms":
-                formsContent.appendChild(article);
-                break;
-            case "scripting":
-                scriptingContent.appendChild(article);
-                break;
-            default:
-                console.log("Произошла ошибка: такой секции не существует");
-        }
-
-        button.addEventListener('click', function () {
-            const buttonKey = button.textContent;
-            const blockClicked = document.querySelector(`#${buttonKey}`);
-
-            const titleSection = document.createElement("section");
-            titleSection.className = "message__title";
-
-            const contentSection = document.createElement("section");
-            contentSection.className = "message__content";
-
-            const exampleSection = document.createElement("section");
-            exampleSection.className = "message__example";
-
-            const title = document.createElement("h3");
-            title.className = "title__inner";
-            title.textContent = data[nameDataSection][keyItem]['title'];
-
-            const contentTitle = document.createElement("h3");
-            contentTitle.className = "content__title";
-            contentTitle.textContent = "О теге:";
-            const content = document.createElement("div");
-            content.className = "content__inner";
-            content.innerHTML = data[nameDataSection][keyItem]['content'];
-
-            const exampleTitle = document.createElement("h3");
-            exampleTitle.className = "example__title";
-            exampleTitle.textContent = "Пример:"
-            const exampleContent = document.createElement("div");
-            exampleContent.className = "example__inner";
-            exampleContent.innerHTML = data[nameDataSection][keyItem]["example"];
-
-            titleSection.appendChild(title);
-            contentSection.appendChild(contentTitle);
-            contentSection.appendChild(content);
-            exampleSection.appendChild(exampleTitle);
-            exampleSection.appendChild(exampleContent);
-
-            message.appendChild(titleSection);
-            message.appendChild(contentSection);
-            message.appendChild(exampleSection);
-
-            blockClicked.appendChild(contentTemplateNode);
-            dialog.classList.remove('close');
-            dialog.showModal();
-        });
-    }
-}
-
-closeButton.addEventListener('click', function () {
+closeButton.addEventListener('click', function() {
     dialog.classList.add('close');
     setTimeout(() => {
         dialog.close();
         message.innerHTML = '';
     }, 300);
+});
+
+function openContent(section) {
+    const sectionClassName = section.className;
+    for (let element in data[sectionClassName]) {
+        const htmlElement = `
+            <article class="body__item" key="${element}">
+                <h3 class="item__title--visually-hidden">
+                    ${element}
+                </h3>
+                <button class="item__open-dialog-button" type="button">
+                    ${element}
+                </button>
+            </article>
+        `
+        section.insertAdjacentHTML('beforeend', htmlElement);
+    }
+    const openButtons = section.querySelectorAll('.item__open-dialog-button');
+    openButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const messageSections = `
+                <section class="message__title">
+                    <h4 class="title__message-inner">
+                        Тег: ${button.innerText}
+                    </h4>
+                </section>
+                <section class="message__content">
+                    <h4 class="content__title">О теге:</h4>
+                    <p class="content__inner">${data[sectionClassName][button.innerText]['content']}</p>
+                </section>
+                <section class="message__example">
+                    <h4 class="example__title">Пример:</h4>
+                    <div class="example__inner">
+                        ${data[sectionClassName][button.innerText]['example']}
+                    </div>
+                </section>
+            `;
+            message.insertAdjacentHTML('beforeend', messageSections);
+            document.body.appendChild(contentTemplateNode);
+            dialog.classList.remove('close');
+            dialog.showModal();
+        })
+    })
+}
+
+function closeContent(section) {
+    section.innerHTML = '';
+}
+
+function isOpenOrCloseContent(section, stateKey) {
+    if (state[stateKey]) {
+        state[stateKey] = false;
+        openContent(section);
+    } else {
+        state[stateKey] = true;
+        closeContent(section);
+    }
+}
+
+openSectionButton.forEach(button => {
+    button.addEventListener('click', function () {
+        let buttonText = button.innerText;
+        switch (buttonText) {
+            case 'Секции':
+                isOpenOrCloseContent(
+                    sectionContent,
+                    'sectionContentIsClose'
+                );
+                break;
+            case 'Группировка контента':
+                isOpenOrCloseContent(
+                    groupingContentContent,
+                    'groupingContentContentIsClose'
+                );
+                break;
+            case 'Семантика уровня текста':
+                isOpenOrCloseContent(
+                    textLevelSemanticsContent,
+                    'textLevelSemanticsContentIsClose'
+                );
+                break;
+            case 'Правки':
+                isOpenOrCloseContent(
+                    editsContent,
+                    'editsContentIsClose'
+                );
+                break;
+            case 'Табличные данные':
+                isOpenOrCloseContent(
+                    tabularDataContent,
+                    'tabularDataContentIsClose'
+                );
+                break;
+            case 'Формы':
+                isOpenOrCloseContent(
+                    formsContent,
+                    'formsContentIsClose'
+                );
+                break;
+            case 'Сценарии':
+                isOpenOrCloseContent(
+                    scriptingContent,
+                    'scriptingContentIsClose'
+                );
+                break;
+            default:
+                console.log('Произошла непредвиденная ошибка');
+        }
+    });
 });

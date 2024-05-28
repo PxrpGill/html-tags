@@ -11,84 +11,91 @@
 </head>
 
 <body>
-  <header class="header">
-    <div class="header-container">
-      <h1 class="header__logo">HTML теги</h1>
-      <nav class="header__menu">
-        <ul class="menu__list">
-          <li class="list__item">
-            <a href="./css_styles.html">CSS стили</a>
-          </li>
-          <li class="list__item">
-            <a href="./file_loader.html">Файловый загрузчик</a>
-          </li>
-          <li class="list__item">
-            <a href="./w3c_page.html">Доступность</a>
-          </li>
-          <li class="list__item">
-            <a href="./list.html">To Do List</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
   <main class="main">
-    <div class="main-container">
+    <div class="main__container">
+
       <section class="sections">
-        <div class="sections__title">
-          <h2 class="title__section-title">
-            Разделы
-          </h2>
+        <h2 class="sections__title-section--visually-hidden">
+          Секции
+        </h2>
+        <div class="sections__head">
+          <button class="head__button-show-section">
+            Секции
+          </button>
         </div>
-        <div class="sections__content"></div>
+        <div class="sections__body"></div>
       </section>
+
       <section class="grouping-content">
-        <div class="grouping-content__title">
-          <h2 class="title__section-title">
+        <h2 class="grouping-content__title-section--visually-hidden">
+          Группировка контента
+        </h2>
+        <div class="grouping-content__head">
+          <button class="head__button-show-section">
             Группировка контента
-          </h2>
+          </button>
         </div>
-        <div class="grouping-content__content"></div>
+        <div class="grouping-content__body"></div>
       </section>
+
       <section class="text-level-semantics">
-        <div class="text-level-semantics__title">
-          <h2 class="title__section-title">
+        <h2 class="text-level-semantics__title-section--visually-hidden">
+          Семантика уровня текста
+        </h2>
+        <div class="text-level-semantics__head">
+          <button class="head__button-show-section">
             Семантика уровня текста
-          </h2>
+          </button>
         </div>
-        <div class="text-level-semantics__content"></div>
+        <div class="text-level-semantics__body"></div>
       </section>
+
       <section class="edits">
-        <div class="edits__title">
-          <h2 class="title__section-title">
+        <h2 class="edits__title-section--visually-hidden">
+          Правки
+        </h2>
+        <div class="edits__head">
+          <button class="head__button-show-section">
             Правки
-          </h2>
+          </button>
         </div>
-        <div class="edits__content"></div>
+        <div class="edits__body"></div>
       </section>
+
       <section class="tabular-data">
-        <div class="tabular-data__title">
-          <h2 class="title__section-title">
+        <h2 class="tabular-data__title-section--visually-hidden">
+          Табличные данные
+        </h2>
+        <div class="tabular-data__head">
+          <button class="head__button-show-section">
             Табличные данные
-          </h2>
+          </button>
         </div>
-        <div class="tabular-data__content"></div>
+        <div class="tabular-data__body"></div>
       </section>
+
       <section class="forms">
-        <div class="forms__title">
-          <h2 class="title__section-title">
+        <h2 class="forms__title-section--visually-hidden">
+          Формы
+        </h2>
+        <div class="forms__head">
+          <button class="head__button-show-section">
             Формы
-          </h2>
+          </button>
         </div>
-        <div class="forms__content"></div>
+        <div class="forms__body"></div>
       </section>
+
       <section class="scripting">
-        <div class="scripting__title">
-          <h2 class="title__section-title">
+        <h2 class="scripting__title-section--visually-hidden">
+          Сценарии
+        </h2>
+        <div class="scripting__head">
+          <button class="head__button-show-section">
             Сценарии
-          </h2>
+          </button>
         </div>
-        <div class="scripting__content"></div>
+        <div class="scripting__body"></div>
       </section>
     </div>
   </main>
@@ -101,6 +108,7 @@
     </dialog>
   </template>
   <script type="module" src="main.js"></script>
+  <script type="module" src="header.js"></script>
 </body>
 
 </html>
