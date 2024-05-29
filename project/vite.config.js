@@ -23,7 +23,7 @@ export default defineConfig({
         alias: {
             '/scripts': resolve(__dirname, './src/scripts'),
             '/styles': resolve(__dirname, './src/styles'),
-            '/data': resolve(__dirname, './src/data')
+            '/data': resolve(__dirname, './src/data'),
         },
     }
 });
