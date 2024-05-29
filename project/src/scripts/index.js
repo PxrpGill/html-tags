@@ -1,4 +1,4 @@
-import data from './src/html_data.json';
+import data from '/data/html_data.json';
 
 const templateNode = document.querySelector('.message-template');
 const contentTemplateNode = templateNode.content.cloneNode(true);
@@ -70,7 +70,7 @@ function openContent(section) {
                 </section>
                 <section class="message__content">
                     <h4 class="content__title">О теге:</h4>
-                    <p class="content__inner">${data[sectionClassName][button.innerText]['content']}</p>
+                    ${data[sectionClassName][button.innerText]['content']}
                 </section>
                 <section class="message__example">
                     <h4 class="example__title">Пример:</h4>

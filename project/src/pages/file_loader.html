@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <title>Файловый загрузчик</title>
+  <link rel="stylesheet" href="/styles/style.css">
+  <link rel="stylesheet" href="/styles/file.css">
+</head>
+
+<body>
+  <main>
+    <div class="card">
+      <div class="container">
+        <form>
+          <input type="file" id="file-input" multiple>
+          <br><br>
+          <input type="submit">
+        </form>
+        <h2>Список файлов:</h2>
+        <ul id="file-list"></ul>
+        <div id="progress-bar-container"></div>
+        <template id="progress-template">
+          <progress max="100" value="0" id="file-progress"></progress>
+        </template>
+      </div>
+    </div>
+  </main>
+  <script src="/scripts/loader.js" type="module"></script>
+  <script src="/scripts/header.js" type="module"></script>
+</body>
+
+</html>

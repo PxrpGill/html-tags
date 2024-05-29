@@ -1,4 +1,4 @@
-import data from '../src/css_data.json';
+import data from '/data/css_data.json';
 
 
 const templateNode = document.querySelector(".message-template");

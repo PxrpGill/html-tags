@@ -1,43 +1,29 @@
-import Inspect from 'vite-plugin-inspect';
-import { createHtmlPlugin } from 'vite-plugin-html';
+import { defineConfig } from 'vite';
+import { resolve } from 'path';
 
-export default {
-    base: "/html-tags/",
-    plugins: [
-        Inspect(),
-        createHtmlPlugin({
-            minify: true,
-            pages: [
-                {
-                    filename: "index.html",
-                    template: "index.html"
-                },
-                {
-                    filename: "w3c/w3c_page.html",
-                    template: "w3c/w3c_page.html"
-                },
-                {
-                    filename: "file_loader/file_loader.html",
-                    template: "file_loader/file_loader.html",
-                    scripts: [
-                        { src: "file_loader/loader.js", type: "module" },
-                    ],
-                },
-                {
-                    filename: "to_do_list/list.html",
-                    template: "to_do_list/list.html",
-                    scripts: [
-                        { src: "to_do_list/script.js", type: "module" }
-                    ]
-                },
-                {
-                    filename: "css_styles/css_styles.html",
-                    template: "css_styles/css_styles.html",
-                    scripts: [
-                        { src: "css_styles/css_script.js", type: "module" }
-                    ]
-                }
-            ]
-        })
-    ],
-}; 
+export default defineConfig({
+    base: "/html-tags",
+    root: 'src/pages',
+    build: {
+        outDir: '../../dist',
+        rollupOptions: {
+            input: {
+                main: resolve(__dirname, 'src/pages/index.html'),
+                fileLoader: resolve(__dirname, 'src/pages/file_loader.html'),
+                cssStyles: resolve(__dirname, 'src/pages/css_styles.html'),
+                w3c: resolve(__dirname, 'src/pages/w3c.html'),
+                toDoList: resolve(__dirname, 'src/pages/list.html')
+            }
+        }
+    },
+    server: {
+        open: true,
+    },
+    resolve: {
+        alias: {
+            '/scripts': resolve(__dirname, './src/scripts'),
+            '/styles': resolve(__dirname, './src/styles'),
+            '/data': resolve(__dirname, './src/data')
+        },
+    }
+});

@@ -8,16 +8,16 @@ const header = `
                     <a href="./index.html">HTML теги</a>
                 </li>
                 <li class="menu__item">
-                    <a href="./css_styles.html">CSS стили</a>
+                    <a href="/html-tags/css_styles.html">CSS стили</a>
                 </li>
                 <li class="menu__item">
-                    <a href="./file_loader.html">Файловый загрузчик</a>
+                    <a href="/html-tags/file_loader.html">Файловый загрузчик</a>
                 </li>
                 <li class="menu__item">
-                    <a href="./w3c_page.html">Доступность</a>
+                    <a href="/html-tags/w3c.html">Доступность</a>
                 </li>
                 <li class="menu__item">
-                    <a href="./list.html">To Do List</a>
+                    <a href="/html-tags/list.html">To Do List</a>
                 </li>
             </ul>
         </nav>
