@@ -26,12 +26,21 @@ let state = {
     scriptingContentIsClose: true
 };
 
+let dialogTimerId;
+let sectionTimerId;
+
 closeButton.addEventListener('click', function() {
     dialog.classList.add('close');
-    setTimeout(() => {
+
+    if (dialogTimerId) {
+        clearTimeout(dialogTimerId);
+    }
+
+    dialogTimerId = setTimeout(() => {
         dialog.close();
         message.innerHTML = '';
-    }, 300);
+        dialogTimerId = null;
+    }, 280);
 });
 
 function openContent(section) {
@@ -82,9 +91,14 @@ function closeContent(section) {
     section.classList.remove('animation-open');
     section.classList.add('animation-close');
 
-    setTimeout(() => {
+    if (sectionTimerId) {
+        clearTimeout(sectionTimerId);
+    }
+
+    sectionTimerId = setTimeout(() => {
         section.innerHTML = '';
         section.classList.remove('animation-close');
+        sectionTimerId = null;
     }, 500);
 }
 
