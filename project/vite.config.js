@@ -1,9 +1,17 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
+import { browserslistToTargets } from 'lightningcss';
+import browserslist from 'browserslist';
 
 export default defineConfig({
     base: "/html-tags",
     root: 'src/pages',
+    css: {
+        transformer: 'lightningcss',
+        lightningcss: {
+            targets: browserslistToTargets(browserslist('>= 0.25%'))
+        }
+    },
     build: {
         outDir: '../../dist',
         rollupOptions: {
