@@ -36,6 +36,7 @@ closeButton.addEventListener('click', function() {
 
 function openContent(section) {
     const sectionClassName = section.className;
+    section.classList.add("animation-open");
     for (let element in data[sectionClassName]) {
         const htmlElement = `
             <article class="body__item" key="${element}">
@@ -78,7 +79,13 @@ function openContent(section) {
 }
 
 function closeContent(section) {
-    section.innerHTML = '';
+    section.classList.remove('animation-open');
+    section.classList.add('animation-close');
+
+    setTimeout(() => {
+        section.innerHTML = '';
+        section.classList.remove('animation-close');
+    }, 500);
 }
 
 function isOpenOrCloseContent(section, stateKey) {
