@@ -6,6 +6,7 @@ import browserslist from 'browserslist';
 export default defineConfig({
     base: "/html-tags",
     root: 'src/pages',
+    publicDir: resolve(__dirname, 'public'),
     css: {
         transformer: 'lightningcss',
         lightningcss: {
@@ -14,6 +15,7 @@ export default defineConfig({
     },
     build: {
         outDir: '../../dist',
+        minify: true,
         rollupOptions: {
             input: {
                 main: resolve(__dirname, 'src/pages/index.html'),
@@ -33,5 +35,5 @@ export default defineConfig({
             '/styles': resolve(__dirname, './src/styles'),
             '/data': resolve(__dirname, './src/data'),
         },
-    }
+    },
 });
