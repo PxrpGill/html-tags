@@ -197,22 +197,22 @@
       "time": {
          "title": "Time",
          "content": "<p>time - помечает текст внутри тега как дата, время или оба значения</p><p><time>1957-10-04</time> запущен первый искусственный спутник Земли.</p>",
-         "example": "<img src='/html-tags/examples/time.jpg'>"
+         "example": "<iframe src='/html-tags/frames/time.html'></iframe>"
       },
       "code": {
          "title": "Code",
          "content": "<p>code - используется для отображения кода (скрипта)</p>",
-         "example": "<img src='/html-tags/examples/code.jpg'>"
+         "example": "<iframe src='/html-tags/frames/code.html'></iframe>"
       },
       "var": {
          "title": "Var",
          "content": "<p>Элемент var представляет переменную. Это может быть фактическая переменная в математическом выражении или контексте программирования, идентификатор, представляющий константу, символ, идентифицирующий физическую величину, параметр функции или просто термин, используемый в качестве заполнителя в прозе.</p>",
-         "example": "<img src='/html-tags/examples/var.jpg'>"
+         "example": "<iframe src='/html-tags/frames/var.html'></iframe>"
       },
       "samp": {
          "title": "Samp",
          "content": "<p>samp - используется для отображения текста, который является результатом вывода компьютерной программы или скрипта</p>",
-         "example": "<img src='/html-tags/examples/samp.jpg'>"
+         "example": "<iframe src='/html-tags/frames/samp.html'></iframe>"
       },
       "kbd": {
          "title": "Kbd",
@@ -252,17 +252,17 @@
       "bdi": {
          "title": "Bdi",
          "content": "<p>bdi - указывает фрагмент текста, который должен быть изолирован от изменения направления вывода текста</bdi></p>",
-         "example": "<ul><li>User <bdi>jcranmer</bdi>: 12 posts.</li><li>User <bdi>hober</bdi>: 5 posts.</li><li>User <bdi>إيان</bdi>: 3 posts.</li></ul>"
+         "example": "<iframe src='/html-tags/frames/bdi.html'></iframe>"
       },
       "bdo": {
          "title": "Bdo",
          "content": "<p>bdo - устанавливает направление вывода текста и преимущественно предназначен для использования с языками, где чтение происходит справа налево</p>",
-         "example": "<p><bdo>bdo - устанавливает направление вывода текста и преимущественно предназначен для использования с языками, где чтение происходит справа налево</bdo></p>"
+         "example": "<iframe src='/html-tags/frames/bdo.html'></iframe>"
       },
       "span": {
          "title": "Span",
          "content": "<p>span - тег для выделения текста</p>",
-         "example": "<p>Нет примера</p>"
+         "example": "<iframe src='/html-tags/frames/bdo.html'></iframe>"
       },
       "br": {
          "title": "Br",
@@ -294,17 +294,17 @@
       "source": {
          "title": "Source",
          "content": "<p>Элемент source позволяет авторам указывать несколько альтернативных наборов источников для элементов img или несколько альтернативных медиа-ресурсов для медиа-элементов. Само по себе оно ничего не представляет.<br><br>Атрибут type может присутствовать. Если оно присутствует, значение должно быть допустимой строкой типа MIME.<br><br>Атрибут media также может присутствовать. Если оно присутствует, значение должно содержать действительный список медиа-запросов. Пользовательский агент перейдет к следующему исходному элементу, если значение не соответствует среде.</p>",
-         "example": "<p>Нет примера</p>"
+         "example": "<iframe src='/html-tags/frames/source.html'></iframe>"
       },
       "img": {
          "title": "Img",
          "content": "<p>Элемент img представляет изображение.<br><br>Элемент img имеет источник атрибута измерения, изначально установленный для самого элемента.<br><br>Изображение, заданное атрибутами src и srcset, а также атрибутами srcset любых предыдущих родственных исходных элементов, если родительским элементом является элемент изображения, является внедренным содержимым; значение атрибута alt предоставляет эквивалентный контент для тех, кто не может обрабатывать изображения или у кого отключена загрузка изображений (т. е. это резервный контент элемента img).<br><br>Требования к значению атрибута alt описаны в отдельном разделе.<br><br>Атрибут src должен присутствовать и содержать допустимый непустой URL-адрес, потенциально окруженный пробелами, ссылающийся на неинтерактивный, опционально анимированный ресурс изображения, который не является ни страничным, ни сценарным.</p>",
-         "example": "<p>Нет примера</p>"
+         "example": "<iframe src='/html-tags/frames/img.html'></iframe>"
       },
       "iframe": {
          "title": "Iframe",
          "content": "<p>iframe - создает плавающий фрейм, который находится внутри обычного документа, он позволяет загружать в область заданных размеров любые другие независимые документы</p>",
-         "example": "<p>Нет примера</p>"
+         "example": "<iframe src='/html-tags/frames/iframe.html'></iframe>"
       },
       "embed": {
          "title": "Embed",
@@ -314,7 +314,7 @@
       "object": {
          "title": "Object",
          "content": "<p>object - сообщает браузеру, как загружать и отображать объекты, которые исходно браузер не понимает.<br>Как правило, такие объекты требуют подключения к браузеру специального модуля, который называется плагин, или запуска вспомогательной программы</p>",
-         "example": "<p>Нет примера</p>"
+         "example": "<iframe src='/html-tags/frames/object.html'></iframe>"
       },
       "video": {
          "title": "Video",
@@ -329,7 +329,7 @@
       "track": {
          "title": "Track",
          "content": "<p>track - позволяет авторам указать текстовую дорожку для медийных элементов audio и video</p>",
-         "example": "<p>Нет примера</p>"
+         "example": "<iframe src='/html-tags/frames/track.html'></iframe>"
       },
       "map": {
          "title": "Map",
@@ -339,14 +339,14 @@
       "area": {
          "title": "Area",
          "content": "<p>area - задает форму области, ее размеры, устанавливает адрес документа, на который следует сделать ссылку, а также имя окна или фрейма, куда браузер будет загружать документ.</p>",
-         "example": "<p>Нет примера</p>"
+         "example": "<iframe src='/html-tags/frames/area.html'></iframe>"
       }
    },
    "tabular-data__body": {
       "table": {
          "title": "Table",
          "content": "<p>table - отвечает за создание таблицы</p>",
-         "example": "<p>Нет примера</p>"
+         "example": "<iframe src='/html-tags/frames/table.html'></iframe>"
       },
       "caption": {
          "title": "Caption",
@@ -356,17 +356,17 @@
       "colgroup": {
          "title": "Colgroup",
          "content": "<p>colgroup - предназначен для задания ширины и стиля одной или нескольких колонок таблицы</p>",
-         "example": "<p>Нет примера</p>"
+         "example": "<iframe src='/html-tags/frames/table.html'></iframe>"
       },
       "col": {
          "title": "Col",
          "content": "<p>col - задает группу колонок, обладающх общими характеристиками</p>",
-         "example": "<p>Нет примера</p>"
+         "example": "<iframe src='/html-tags/frames/table.html'></iframe>"
       },
       "tbody": {
          "title": "Tbody",
          "content": "<p>tbody - предназначен для хранения одной или нескольких строк в теле таблицы.<br>Это позволяет создавать структурные блоки.</p>",
-         "example": "<table><tbody><tr><td>Элемент таблицы</td><td>Элемент таблицы</td></tr></tbody></table>"
+         "example": "<iframe src='/html-tags/frames/table.html'></iframe>"
       },
       "thead": {
          "title": "Thead",
@@ -381,12 +381,12 @@
       "tr": {
          "title": "Tr",
          "content": "<p>tr - представляет собой строку таблицы</p>",
-         "example": "<p>Нет примера</p>"
+         "example": "<iframe src='/html-tags/frames/table.html'></iframe>"
       },
       "td": {
          "title": "Td",
          "content": "<p>td - представяет собой элемент таблицы</p>",
-         "example": "<p>Нет примера</p>"
+         "example": "<iframe src='/html-tags/frames/table.html'></iframe>"
       },
       "th": {
          "title": "Th",

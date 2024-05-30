@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <pre>
+    <code>
+      &#60;pre&#62;&#60;code class="lang-c"&#62;&#60;span class="keyword"&#62;for&#60;/span&#62; (&#60;span class="ident"&#62;j&#60;/span&#62; = 0; &#60;span class="ident"&#62;j&#60;/span&#62; &lt; 256; &#60;span class="ident"&#62;j&#60;/span&#62;++) {
+        &#60;span class="ident">i_t3&#60;/span&#62; = (&#60;span class="ident"&#62;i_t3&#60;/span&#62; & 0x1ffff) | (&#60;span class="ident"&#62;j&#60;/span&#62; &lt;&lt; 17);
+        &#60;span class="ident">i_t6&#60;/span&#62; = (((((((&#60;span class="ident"&#62;i_t3&#60;/span&#62; >> 3) ^ &#60;span class="ident"&#62;i_t3&#60;/span&#62;) >> 1) ^ &#60;span class="ident">i_t3&#60;/span&#62;) >> 8) ^ &#60;span class="ident"&#62;i_t3&#60;/span&#62;) >> 5) & 0xff;
+        &#60;span class="keyword">if&#60;/span&#62; (&#60;span class="ident">i_t6&#60;/span> == &#60;span class="ident">i_t1&#60;/span>)
+          &#60;span class="keyword"&#62;break&#60;/span&#62;;
+      }&#60;/code&#62;&#60;/pre&#62;
+    </code>
+  </pre>
+</body>
+
+</html>
