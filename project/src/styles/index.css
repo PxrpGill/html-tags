@@ -402,3 +402,7 @@
     color: black;
 }
 
+iframe {
+    min-width: 75%;
+    height: 40%;
+}
