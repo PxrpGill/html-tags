@@ -73,16 +73,21 @@
     gap: 20px;
     width: 100%;
     margin-bottom: 20px;
+    overflow: hidden; 
+    max-height: 0; 
+    transition: max-height .5s ease; 
 }
 
 .sections__body.animation-open {
     transform: translateX(-100%);
-    animation: animation-open 1s forwards;
+    animation: animation-open .5s forwards;
+    max-height: 1000px;
 }
 
 .sections__body.animation-close {
     transform: translateX(0);
-    animation: animation-close 1s forwards;
+    animation: animation-close .5s forwards;
+    max-height: 0;
 }
 
 @keyframes animation-open {
@@ -123,16 +128,21 @@
     gap: 20px;
     width: 100%;
     margin-bottom: 20px;
+    overflow: hidden; 
+    max-height: 0; 
+    transition: max-height .5s ease; 
 }
 
 .grouping-content__body.animation-open {
     transform: translateX(-150%);
-    animation: animation-open 1s forwards;
+    animation: animation-open .5s forwards;
+    max-height: 1000px;
 }
 
 .grouping-content__body.animation-close {
     transform: translateX(0);
-    animation: animation-close 1s forwards;
+    animation: animation-close .5s forwards;
+    max-height: 0;
 }
 
 .text-level-semantics {
@@ -153,16 +163,21 @@
     gap: 20px;
     width: 100%;
     margin-bottom: 20px;
+    overflow: hidden; 
+    max-height: 0; 
+    transition: max-height .5s ease; 
 }
 
 .text-level-semantics__body.animation-open {
     transform: translateX(-100%);
-    animation: animation-open 1s forwards;
+    animation: animation-open .5s forwards;
+    max-height: 1000px;
 }
 
 .text-level-semantics__body.animation-close {
     transform: translateX(0);
-    animation: animation-close 1s forwards;
+    animation: animation-close .5s forwards;
+    max-height: 0;
 }
 
 .edits {
@@ -183,16 +198,21 @@
     gap: 20px;
     width: 100%;
     margin-bottom: 20px;
+    overflow: hidden; 
+    max-height: 0; 
+    transition: max-height .5s ease; 
 }
 
 .edits__body.animation-open {
     transform: translateX(-100%);
-    animation: animation-open 1s forwards;
+    animation: animation-open .5s forwards;
+    max-height: 1000px;
 }
 
 .edits__body.animation-close {
     transform: translateX(0);
-    animation: animation-close 1s forwards;
+    animation: animation-close .5s forwards;
+    max-height: 0;
 }
 
 .tabular-data {
@@ -213,16 +233,21 @@
     gap: 20px;
     width: 100%;
     margin-bottom: 20px;
+    overflow: hidden; 
+    max-height: 0; 
+    transition: max-height .5s ease; 
 }
 
 .tabular-data__body.animation-open {
     transform: translateX(-100%);
-    animation: animation-open 1s forwards;
+    animation: animation-open .5s forwards;
+    max-height: 1000px;
 }
 
 .tabular-data__body.animation-close {
     transform: translateX(0);
-    animation: animation-close 1s forwards;
+    animation: animation-close .5s forwards;
+    max-height: 0;
 }
 
 .forms {
@@ -243,16 +268,21 @@
     gap: 20px;
     width: 100%;
     margin-bottom: 20px;
+    overflow: hidden; 
+    max-height: 0; 
+    transition: max-height .5s ease; 
 }
 
 .forms__body.animation-open {
     transform: translateX(-150%);
-    animation: animation-open 1s forwards;
+    animation: animation-open .5s forwards;
+    max-height: 2000px;
 }
 
 .forms__body.animation-close {
     transform: translateX(0);
-    animation: animation-close 1s forwards;
+    animation: animation-close .5s forwards;
+    max-height: 0;
 }
 
 .scripting {
@@ -273,16 +303,22 @@
     gap: 20px;
     width: 100%;
     margin-bottom: 20px;
+    overflow: hidden; 
+    max-height: 0; 
+    transition: max-height .5s ease; 
 }
 
 .scripting__body.animation-open {
     transform: translateX(-150%);
-    animation: animation-open 1s forwards;
+    animation: animation-open .5s forwards;
+    max-height: 1000px;
+
 }
 
 .scripting__body.animation-close {
     transform: translateX(0);
-    animation: animation-close 1s forwards;
+    animation: animation-close .5s forwards;
+    max-height: 0;
 }
 
 .body__item {
