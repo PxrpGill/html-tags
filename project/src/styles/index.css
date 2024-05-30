@@ -311,6 +311,8 @@
     background-color: var(--big-content);
     border-radius: 10px;
     animation: fadeIn 0.3s ease-in-out;
+    max-height: 75%;
+    top: 10%;
 }
 
 @keyframes fadeIn {
@@ -370,3 +372,4 @@
     background-color: red;
     color: black;
 }
+
