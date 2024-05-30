@@ -29,7 +29,7 @@ let state = {
 let dialogTimerId;
 let sectionTimerId;
 
-closeButton.addEventListener('click', function () {
+function closeModal() {
     dialog.classList.add('close');
 
     if (dialogTimerId) {
@@ -41,21 +41,15 @@ closeButton.addEventListener('click', function () {
         message.innerHTML = '';
         dialogTimerId = null;
     }, 280);
+}
+
+closeButton.addEventListener('click', function () {
+    closeModal();
 });
 
 document.addEventListener('keydown', function (event) {
     if (event.key === 'Escape') {
-        dialog.classList.add('close');
-
-        if (dialogTimerId) {
-            clearTimeout(dialogTimerId);
-        }
-
-        dialogTimerId = setTimeout(() => {
-            dialog.close();
-            message.innerHTML = '';
-            dialogTimerId = null;
-        }, 280);
+        closeModal();
     }
 });
 
