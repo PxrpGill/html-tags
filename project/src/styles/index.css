@@ -73,7 +73,6 @@
     gap: 20px;
     width: 100%;
     margin-bottom: 20px;
-    overflow: hidden; 
     max-height: 0; 
     transition: max-height .5s ease; 
 }
@@ -128,7 +127,6 @@
     gap: 20px;
     width: 100%;
     margin-bottom: 20px;
-    overflow: hidden; 
     max-height: 0; 
     transition: max-height .5s ease; 
 }
@@ -163,7 +161,6 @@
     gap: 20px;
     width: 100%;
     margin-bottom: 20px;
-    overflow: hidden; 
     max-height: 0; 
     transition: max-height .5s ease; 
 }
@@ -197,8 +194,7 @@
     grid-auto-rows: 70px;
     gap: 20px;
     width: 100%;
-    margin-bottom: 20px;
-    overflow: hidden; 
+    margin-bottom: 20px; 
     max-height: 0; 
     transition: max-height .5s ease; 
 }
@@ -232,8 +228,7 @@
     grid-auto-rows: 70px;
     gap: 20px;
     width: 100%;
-    margin-bottom: 20px;
-    overflow: hidden; 
+    margin-bottom: 20px; 
     max-height: 0; 
     transition: max-height .5s ease; 
 }
@@ -267,8 +262,7 @@
     grid-auto-rows: 70px;
     gap: 20px;
     width: 100%;
-    margin-bottom: 20px;
-    overflow: hidden; 
+    margin-bottom: 20px; 
     max-height: 0; 
     transition: max-height .5s ease; 
 }
@@ -303,7 +297,6 @@
     gap: 20px;
     width: 100%;
     margin-bottom: 20px;
-    overflow: hidden; 
     max-height: 0; 
     transition: max-height .5s ease; 
 }

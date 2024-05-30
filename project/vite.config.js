@@ -4,7 +4,7 @@ import { browserslistToTargets } from 'lightningcss';
 import browserslist from 'browserslist';
 
 export default defineConfig({
-    base: "/html-tags",
+    base: "/html-tags/",
     root: 'src/pages',
     publicDir: resolve(__dirname, 'public'),
     css: {
@@ -22,7 +22,8 @@ export default defineConfig({
                 fileLoader: resolve(__dirname, 'src/pages/file_loader.html'),
                 cssStyles: resolve(__dirname, 'src/pages/css_styles.html'),
                 w3c: resolve(__dirname, 'src/pages/w3c.html'),
-                toDoList: resolve(__dirname, 'src/pages/list.html')
+                toDoList: resolve(__dirname, 'src/pages/list.html'),
+                ...getFramesInput(resolve(__dirname, 'src/pages/frames'))
             }
         }
     },
@@ -37,3 +38,21 @@ export default defineConfig({
         },
     },
 });
+
+function getFramesInput(directory) {
+    const fs = require('fs');
+    const path = require('path');
+
+    const files = fs.readdirSync(directory);
+    const input = {};
+
+    for (const file of files) {
+        const filePath = path.resolve(directory, file);
+        const fileName = path.parse(file).name;
+        if (fs.statSync(filePath).isFile() && path.extname(file) === '.html') {
+            input[fileName] = filePath;
+        }
+    }
+
+    return input;
+}
