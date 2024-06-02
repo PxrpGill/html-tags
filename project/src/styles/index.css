@@ -407,3 +407,70 @@ iframe {
     min-height: 300px;
     background-color: white;
 }
+
+
+@media screen and (max-width: 790px) {
+    .sections__body {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grouping-content__body {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .text-level-semantics__body {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .edits__body {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .tabular-data__body {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .forms__body {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .scripting__body {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .sections__body {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grouping-content__body {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .text-level-semantics__body {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .text-level-semantics__body.animation-open {
+        transform: translateX(-100%);
+        animation: animation-open .5s forwards;
+        max-height: 2000px;
+    }
+
+    .edits__body {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tabular-data__body {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .forms__body {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .scripting__body {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
