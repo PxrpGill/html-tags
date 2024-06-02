@@ -1,0 +1,13 @@
+code {
+    font-size: 16px;
+}
+
+.tag {
+    color: rgb(0, 138, 0);
+    font-weight: 900;
+}
+
+.selector {
+    color: purple;
+    font-weight: 900;
+}

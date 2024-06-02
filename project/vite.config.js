@@ -23,7 +23,64 @@ export default defineConfig({
                 cssStyles: resolve(__dirname, 'src/pages/css_styles.html'),
                 w3c: resolve(__dirname, 'src/pages/w3c.html'),
                 toDoList: resolve(__dirname, 'src/pages/list.html'),
-                ...getFramesInput(resolve(__dirname, 'src/pages/frames'))
+
+                abbr: resolve(__dirname, 'src/pages/frames/abbr.html'),
+                address: resolve(__dirname, 'src/pages/frames/address.html'),
+                area: resolve(__dirname, 'src/pages/frames/area.html'),
+                article: resolve(__dirname, 'src/pages/frames/article.html'),
+                aside: resolve(__dirname, 'src/pages/frames/aside.html'),
+
+                bdi: resolve(__dirname, 'src/pages/frames/bdi.html'),
+                bdo: resolve(__dirname, 'src/pages/frames/bdo.html'),
+                blockquote: resolve(__dirname, 'src/pages/frames/blockquote.html'),
+
+                cite: resolve(__dirname, 'src/pages/frames/cite.html'),
+                code: resolve(__dirname, 'src/pages/frames/code.html'),
+
+                data: resolve(__dirname, 'src/pages/frames/data.html'),
+                dfn: resolve(__dirname, 'src/pages/frames/dfn.html'),
+                div: resolve(__dirname, 'src/pages/frames/div.html'),
+                dl: resolve(__dirname, 'src/pages/frames/dl.html'),
+                dt: resolve(__dirname, 'src/pages/frames/dt.html'),
+
+                figure: resolve(__dirname, 'src/pages/frames/figure.html'),
+                footer: resolve(__dirname, 'src/pages/frames/footer.html'),
+
+                header: resolve(__dirname, 'src/pages/frames/header.html'),
+                hgroup: resolve(__dirname, 'src/pages/frames/hgroup.html'),
+
+                iframe: resolve(__dirname, 'src/pages/frames/iframe.html'),
+                img: resolve(__dirname, 'src/pages/frames/img.html'),
+
+                mainTag: resolve(__dirname, 'src/pages/frames/main.html'),
+                menu: resolve(__dirname, 'src/pages/frames/menu.html'),
+
+                nav: resolve(__dirname, 'src/pages/frames/nav.html'),
+
+                object: resolve(__dirname, 'src/pages/frames/object.html'),
+                ol: resolve(__dirname, 'src/pages/frames/ol.html'),
+
+                p: resolve(__dirname, 'src/pages/frames/p.html'),
+                pre: resolve(__dirname, 'src/pages/frames/pre.html'),
+
+                q: resolve(__dirname, 'src/pages/frames/q.html'),
+
+                rp: resolve(__dirname, 'src/pages/frames/rp.html'),
+                ruby: resolve(__dirname, 'src/pages/frames/ruby.html'),
+
+                samp: resolve(__dirname, 'src/pages/frames/samp.html'),
+                search: resolve(__dirname, 'src/pages/frames/search.html'),
+                section: resolve(__dirname, 'src/pages/frames/section.html'),
+                source: resolve(__dirname, 'src/pages/frames/source.html'),
+                span: resolve(__dirname, 'src/pages/frames/span.html'),
+
+                table: resolve(__dirname, 'src/pages/frames/table.html'),
+                time: resolve(__dirname, 'src/pages/frames/time.html'),
+                track: resolve(__dirname, 'src/pages/frames/track.html'),
+
+                ul: resolve(__dirname, 'src/pages/frames/ul.html'),
+
+                var: resolve(__dirname, 'src/pages/frames/var.html')
             }
         }
     },
@@ -38,21 +95,3 @@ export default defineConfig({
         },
     },
 });
-
-function getFramesInput(directory) {
-    const fs = require('fs');
-    const path = require('path');
-
-    const files = fs.readdirSync(directory);
-    const input = {};
-
-    for (const file of files) {
-        const filePath = path.resolve(directory, file);
-        const fileName = path.parse(file).name;
-        if (fs.statSync(filePath).isFile() && path.extname(file) === '.html') {
-            input[fileName] = filePath;
-        }
-    }
-
-    return input;
-}
