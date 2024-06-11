@@ -2,6 +2,9 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 import { browserslistToTargets } from 'lightningcss';
 import browserslist from 'browserslist';
+import lightningCSSPlugin from './vite-plugin-lightningcss';
+
+
 
 export default defineConfig({
     base: "/html-tags/",
@@ -13,9 +16,11 @@ export default defineConfig({
             targets: browserslistToTargets(browserslist('>= 0.25%'))
         }
     },
+    plugins: [lightningCSSPlugin()],
     build: {
         outDir: '../../dist',
         minify: true,
+        cssMinify: 'lightningcss',
         rollupOptions: {
             input: {
                 main: resolve(__dirname, 'src/pages/index.html'),
